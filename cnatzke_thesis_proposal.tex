@@ -1,0 +1,259 @@
+%\documentclass[letterpaper,12pt]{article}  % includes images!
+\documentclass[letterpaper,12pt]{article}  % Does not include images but faster
+
+% csm-thesis automatically includes the following packages:
+%% float
+%% setspace
+%% geometry
+%% graphics
+%% textcase
+%% subfig
+
+% Note: Two package options exist for your convenience: ``insane'' and ``nolabel''.  To use these options together separate them by a comma, ie. \usepackage[insane,nolabel]{csm-thesis}
+\usepackage[insane]{csm-thesis}
+% Turn off all document sanity checks.  This option can be used to render a ``sub-document'' that is part of the root thesis document.  It is important to note that you should NEVER disable this check on your root thesis document, as important format errors and warnings will be disabled.
+% * \usepackage[nolabel]{csm-thesis}
+% Disables automatic reference ``labeling'' of figures and tables.  By default the thesis template prepends any reference to a figure or table with ``Figure~'' or ``Table~''.  This option is meant for disabling the labeling behavior when a document already has the appropriate labeling.  It is important to note that if your document DOES NOT have the appropriate labeling (the reference label must EXACTLY MATCH the caption label) then it will not pass the format review.
+\usepackage{csm-thesis}
+
+% For inserting large multi-page tables:
+\usepackage{array}
+\usepackage{longtable}
+% For inserting sideways tables and figures
+\usepackage{rotating}
+\usepackage{physics}
+% Since hyperref and cite don't completely get along, the template now recommends using natbib:
+% For an explanation, see http://www.tex.ac.uk/cgi-bin/texfaq2html?label=citesort
+\usepackage[numbers]{natbib}
+% If you wish to use ``cite'' instead then your choices are:
+% 1) Don't use the hyperref package
+% 2) Put ``cite'' before hyperref, resulting in no citation hyperlinks
+% 3) Put ``cite'' after hyperref, resulting in ugly looking citations
+
+% If you choose not to use natbib then you can set the standard ``numeric'' style like so:
+%\bibliographystyle{unsrt}
+
+% Important Note: math-mode in sections, titles, and other bookmarks will generate warnings with hyperref.  You can work around this by either:
+% 1) Not using the hyperref package
+% 2) Using \texorpdfstring{TeX Code}{PDF Replacement} to display an alternative bookmark (for example, \texorpdfstring{H$_2$O}{Water}).
+% The thesis template will automatically import your document information into hyperref, so if you go to ``File | Properties'' in Adobe Acrobat it will display the title and author.  If you would like to over-ride this option then just change the line below to ``\usepackage[]{hyperref}''.
+\usepackage{hyperref}
+
+% For inserting programming code:
+\usepackage{listings}
+
+% For inserting landscape-mode objects:
+\usepackage{pdflscape} % use ``lscape'' if you are not creating a PDF output
+
+% For matrices:
+\usepackage{amsmath}
+\usepackage{xcolor,mdframed}
+\usepackage{graphicx}
+\usepackage{grffile}
+\graphicspath{{images/}{../images/}{figures/}{../figures/}}
+
+\usepackage[final]{pdfpages}
+\usepackage{subfig}
+\usepackage{stmaryrd}
+
+
+\usepackage{subfiles}
+
+% For using helvetica instead of Computer Modern
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+%% For automatic equation breaking (experimental!):
+%\usepackage{breqn}
+
+% For using row-spanning and column-spanning in tables:
+%\usepackage{multirow}
+
+% The thesis title MUST be in an inverted pyramid shape.  To do this you can either specify the returns in the title manually or have the thesis style attempt to automatically build the title in the shape of an inverted pyramid.  The thesis style will automatically choose the appropriate behavior by detecting the presence of returns (\\) in the title.
+% Please note that by ``inverted pyramid'' the graduate office really means a regular trapezoid with the larger base on the top.
+% <<MANUAL PYRAMID:>>
+% Use ``\\" to end a line, all normal LaTeX should function properly.
+	%\title{%
+	%	Developing a \atom{12}{6}{Th}{2+}{3}esis Template\\%
+	%	to Help Students Graduate\\%
+	%	in a Reasonable Time%
+	%}
+% <<AUTOMATIC PYRAMID:>>
+% Do not put any carriage returns (\\), all normal LaTeX should function properly.
+\title{Thesis Proposal : Searching for Nuclear Two-Photon Decay with GRIFFIN}
+
+% Please note: If you are generating a title containing math mode then it is best to use \texorpdfstring to provide an alternative text for the PDF Title.  If you do not do this then you will see a ''Token not allowed in a PDFDocEncoded string`` warning when rendering your document.
+% eg. \texorpdfstring{H$_2$O}{Water}
+% One final word of caution: The usage of atoms/molecules in titles <may> need to be spelled out on the cover since the binding company cannot typeset them.
+
+\degreetitle{Doctor of Philosophy}
+\discipline{Physics}
+\department{Physics}
+
+\author{Connor Natzke}
+\advisor{Dr. Kyle Leach}
+% Comment out the following line if you do not have a co-advisor:
+% \coadvisor{Dr. Secondary B. Advisor}
+\dpthead{Dr. Fred Sarazin}{Professor and Head}
+
+\begin{document}
+
+% Parts of a Thesis
+
+%% Parts of a Thesis - Front Matter
+
+\frontmatter
+
+%%% Parts of a Thesis - Front Matter - Title Page (required)
+
+\maketitle
+\newpage
+
+%%% Parts of a Thesis - Front Matter - Copyright Page (optional)
+
+% If the copyright for your document spans multiple years, or does not match the current year, then replace ''\the\year`` below with the appropriate text.
+%\makecopyright{\the\year}
+%\newpage
+
+%%% Parts of a Thesis - Front Matter - Signature Page (required)
+
+%\makesubmittal
+%\newpage
+
+%%% Parts of a Thesis - Front Matter - Abstract (required)
+%\include{abstract}
+%\subfile{abstract}
+
+
+%\newpage
+
+%%% Parts of a Thesis - Front Matter - Table of Contents (required)
+
+\tableofcontents
+\newpage
+
+%%% Parts of a Thesis - Front Matter - List of Figures (if applicable)
+%%% Parts of a Thesis - Front Matter - List of Tables (if applicable)
+
+% NOTE: If you have more than 2 items in either list they must be separate.
+% This case is generally handled automatically, but if you are told to separate the lists then comment or remove the two lines below:
+%\listoffiguresandtables
+%\newpage
+
+% ... and then uncomment these four lines to force separate lists:
+%\listoffigures
+%\newpage
+%\listoftables
+%\newpage
+
+
+%% NOTE: If included in the front matter, a glossary, a list of abbreviations, or a list of symbols is placed as the last list. If these lists are included in the back matter, they are placed immediately before the REFERENCES CITED.
+
+%%% Parts of a Thesis - Front Matter - Glossary (if applicable)
+%\glossary
+
+%%% Parts of a Thesis - Front Matter - List of Symbols (if applicable)
+
+% Place this call before ''\listofsymbols`` to make the symbols appear on the left instead of the right:
+%\ShowSymbolFirst
+% To call the “List of Symbols” “Nomenclature” instead use:
+%\listofsymbols[Nomenclature]
+% To autosort the list use a star after the command (ie. \listofsymbols*[Nomenclature] or \listofsymbols*)
+%\listofsymbols
+% With very large symbol lists it is sometimes good to split the list into multiple sub-lists.  To output the lists just use the extended \listofsymbols command (below) and to add an element to the list use the optional parameter to ''\addsymbol``.
+%\listofsymbols{General Nomenclature}
+%\listofsymbols{Greek Letters}
+%\newpage
+
+% Note that you may define symbols anywhere in the document, when you re-run LaTeX they
+% will be added to the list (just like all other lists)
+%\addsymbol{absorption coefficient}{$\alpha_c$}
+%\addsymbol{absorption cross section}{$\alpha_{\sigma}$}
+%\addsymbol{average radius of cylindrical shell}{$c$}
+%\addsymbol{activation energy of oxidation reaction of a-C in excited state}{$E^{\ast}_{act}$}
+
+% Example for sub-list symbols (optional parameter specifies which list to use):
+%\addsymbol[General Nomenclature]{absorption coefficient}{$\alpha_c$}
+%\addsymbol[General Nomenclature]{absorption cross section}{$\alpha_{\sigma}$}
+%\addsymbol[Greek Letters]{average radius of cylindrical shell}{$c$}
+%\addsymbol[Greek Letters]{activation energy of oxidation reaction of a-C in excited state}{$E^{\ast}_{act}$}
+
+%%% Parts of a Thesis - Front Matter - List of Abbreviations (if applicable)
+% To autosort the list use a star after the command (ie. \listofabbreviations*)
+%\listofabbreviations
+%\newpage
+
+% Note that you may define abbreviations anywhere in the document, when you re-run LaTeX they
+% will be added to the list (just like all other lists)
+%\addabbreviation{Bio Force Gun, Model 9000}{BFG9000}
+%\addabbreviation{Mammoth Armed Reclamation Vehicle}{MARV}
+%\addabbreviation{Stone of Jordan}{SoJ}
+%\addabbreviation{Field flow fractionation-inductively coupled plasma-mass\newline spectrometry% with extra% magic and stuff and things
+%\addabbreviation{Field flow  fractionation-inductively coupled plasma-mass spectrometry% with extra% magic and stuff and things
+%}{FFF-ICP-MS}
+
+%%% Parts of a Thesis - Front Matter - Acknowledgments (optional)
+
+%\subfile{acknowledgements}
+%\newpage
+
+%%% Parts of a Thesis - Front Matter - Dedication (optional)
+
+%\begin{dedication}
+%Work in progress...
+
+%\end{dedication}
+%\newpage
+
+%% Parts of a Thesis - Body
+
+\bodymatter
+
+%%% Parts of a Thesis - Body - Introduction (optional)
+%\chapter{Introduction}
+% A fun introduction would go here, just uncomment!
+
+%%% Parts of a Thesis - Body - All Chapters and Sections (required)
+\chapter{Introduction to Nuclear Two-photon Decay}
+\subfile{chapter_introduction_proposal}
+%\subfile{chapter_TITAN_Facility_at_TRIUMF}
+\subfile{chapter_Ion_Manipulation_and_DecaySpec_in_EBIT}
+\subfile{chapter_Towards_NEEC_in_129Sb}
+\subfile{chapter_Simulations}
+%\subfile{chapter_Beam_Purification_in_an_MR_TOF}
+%\subfile{chapter_Demonstration_of_beam_purification_in_MR_TOF}
+\subfile{chapter_Conclusions}
+
+%\subfile{chapter_theory}
+
+%\subfile{chapter_experimental_setup}
+%\subfile{chapter_daq}
+
+%\subfile{chapter_HPGE}
+%\subfile{chapter_analysis}
+
+
+%% Parts of a Thesis - Back Matter
+\backmatter
+
+%%% Parts of a Thesis - Back Matter - References Cited (required)
+
+% Use "Advanced" Bibliography Techniques
+\bibliography{library}
+%\printbibliography % <-- For using biblatex instead of natbib or the built-in bibliography utilitycsm-thesis-environments.sty
+
+%%% Parts of a Thesis - Back Matter - Selected Bibliography (optional)
+%\cleardoublepage
+%\begin{selected-bibliography}
+% Your selected bibliogrpahy would go here, a page break might also be necessary above.
+%\end{selected-bibliography}
+
+%%% Parts of a Thesis - Back Matter - Appendices (if applicable)
+%\appendix{Magical Encoding Awesomeness}\label{app:encoding}
+
+%\appendix{Special Coolness}
+%\appendix{Special Coolness}
+\subfile{appendix}
+
+
+\end{document}

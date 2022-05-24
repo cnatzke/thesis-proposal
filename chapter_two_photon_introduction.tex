@@ -1,0 +1,120 @@
+%! Author = wintermute
+%! Date = 1/7/22
+\documentclass[cnatzke_thesis_proposal.tex]{subfiles}
+\usepackage{amssymb}
+\begin{document}
+%\chapter{Introduction}
+    \subsection{Nuclear Two-photon Decay}
+    Electroweak processes such as Internal Conversion (IC) and Electron Capture (EC) are common decay modes dealing with interactions that take place between an atom's nucleus and its bound electrons.
+    However, interaction between the nucleus and the atoms electrons are not restricted to decays and can be used to stimulate the nucleus to a higher energy state.
+
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[scale=.3]{NEEC_Process_Image.png}
+        \end{center}
+        \caption{Nuclear Excitation via Electron capture overview. \cite{eec_SOP_NEEC}}
+        \label{fig:neec_process}
+    \end{figure}
+
+    Nuclear Excitation via Electron Capture (NEEC) is a resonate energy process, essentially the same as Internal Conversion (IC) except time reversed.
+    With NEEC a highly charged ion, typically stripped down it its K, L, or M shells, captures a free electron from the continuum into an atomic vacancy.
+    Once captured, if the electrons kinetic energy and the binding energy of the vacancy match that of the difference between isomeric states then a resonate energy transfer process is possible (Eq.~\ref{eq:neec_eq}).
+
+    \begin{equation}
+        K.E._{electron} + B.E._{captured} = \Delta E_{nucleus}
+        \label{eq:neec_eq}
+    \end{equation}
+
+    Where $K.E._{electron}$ is the kinetic energy of the free electron, $B.E._{captured}$ is the binding energy of the atomic vacancy and $\Delta E_{nucleus}$ is the change in the excitation energy of the nucleus between its initial and final states.
+    The mechanism behind this resonant excitation is that of either Coulomb interaction or virtual photon exchange~\cite{PALFFY_2007}.
+    Unlike processes such as broadband photoexcitation of isomers with bremsstrahlung photons, NEEC is a \textit{resonant} process and requires specific energy matching conditions for the excitation to occur, thus making it incredibly selective.
+    Specifically, the sum of the kinetic energy of the free electron and captured binding energy must correspond to the energy difference between the initial and final nuclear states~\cite{PALFFY_2007}.
+    This results in the need for strong atomic charge-state control over the sample, as well as careful case selection of nuclear states that may be compatible with efficient electron recombination.
+
+    The process of NEEC can therefore be used to excite selectively a nuclear state under specific nuclear and atomic conditions that satisfy Eq. \ref{eq:neec_eq}.
+    Some of these meta-stable and unstable isomeric states are only separated by a few keV allowing for a release of MeV scale energy by means of capture of a few keV electron via NEEC.
+    Originally predicted in the mid 1970's by Goldanskii and Namiot~\cite{Goldanskii1976} stimulation of the NEEC process has only ever been attempted in stable elements which drastically limits the number of candidates available to study NEEC.
+    This selective triggering of isomeric states opens up the possibility of studying the impact this process has on astrophysics as well as generating considerable interest in how this could be used for energy storage to create a nuclear battery.
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+    \subsection{NEEC and Nuclear Astrophysics}
+
+    In astrophysical events, the charge-states of the ions as well as the population of excited states are governed by the electron densities and the temperature of the stellar plasma \cite{eec_SOP_NEEC}.
+    Explosive scenarios like the $r$ process in core collapse supernovae and binary neutron star mergers easily reach temperatures in excess of 1--2~GK, corresponding to a Maxwell-Boltzmann velocity distribution of the participating particles.
+    The most probable energy of the particles in the plasma is then between $kT$=86--172~keV but the high-energy tail of the distribution allows thermal population of states with several 100's of keV excitation energy.
+
+    This population of higher-lying states can lead to detours of the reaction flow, causing an acceleration or deceleration of the decay if certain $\beta$-decaying states are bypassed.
+    These so-called \textit{"gateway states"} play a significant role for heavy element nucleosynthesis processes and can lead to wrong conclusions in the interpretation of abundances of stable nuclei when compared to terrestrial conditions.
+    The population of these gateway states can occur in different processes.
+    They are not only thermally populated by ($\gamma, \gamma'$) but also by inelastic neutron scattering via ($n,n' \gamma$) reactions or even in secondary reactions by exotic decay processes like NEEC and NEET (Nuclear Excitation by Electronic Transitions).
+    Unfortunately, these excitation processes -- with exception of thermal population -- are so far not well investigated or even included in astrophysical simulations or post-processing codes.
+    In fact, whether NEEC has ever been observed is still a major open question (Section~\ref{discrepancy}).
+
+    Several nuclei have been identified where these gateway states can be populated under stellar conditions and need to be considered for a complete understanding of the differences in measured vs. calculated abundances.
+    Examples are
+    \begin{itemize}
+        \item the Cd-In-Sn isotopes in mass region $A$=113--115 where many isomeric states exist and the reactions flows of all three heavy element nucleosynthesis processes ($s$, $r$, $\gamma$) come together~\cite{Nem94}.
+        \vspace{-10pt}
+        \item long-lived quasi-stable $^{176}$Lu and $^{180}$Ta$^m$ which were originally proposed as $s$-process chronometers but the population of gateway states changes their effective stellar lifetimes drastically~\cite{Car89}.
+    \end{itemize}
+
+
+%Another possibility of influencing the decay of certain astrophysically relevant nuclei in a stellar plasma is by ionization. These effects have been described for the bound-state $\beta$-decay of fully-ionized nuclei -- such as $^{187}$Re$^{75+}$ -- which together with $^{187}$Os is used as chronometer to determine the age of the Galaxy (F. Bosch, PRL77, 5190 (1996)). Another example is the partial blocking of the EC of $^{7}$Be in the Sun which leads to a $\approx$2x longer solar lifetime of $^{7}$Be.
+
+    Despite the fact that these processes are not included in astrophysical simulations, such exotic decay modes could modify reaction flows, e.g. back to stability in the $r$-process freeze-out phase.
+    In Fig.~\ref{A129-decay} the $A$=129 decay chain starting at $^{129}$Sb back to stability ($^{129}$Xe) under terrestrial conditions is shown.
+    If the relative NEEC probabilities are indeed as large as reported in Ref.~\cite{Chiara2018}, this process would have a significant effect.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{129Sb-decays-NEEC.png}
+        \caption{\label{A129-decay}\small{Change in the reaction flow for the $A$= 129 decay chain from $^{129}$Sb up to stability. (Top) Under terrestrial conditions, the majority of the decay from the (19/2$^-$) isomeric state would go through the 11/2$^-$ isomer in $^{129}$Te. (Bottom) If the NEEC process is strong, the (19/2$^-$) isomeric state would be depopulated and decays mainly occur via the low-spin ground-states.} \cite{eec_SOP_NEEC}}
+    \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    The long-lived $^{129}$I ($t_{1/2}$= 15.7~My) plays a special role in this decay chain since it can be detected in meteorites (presolar grains) and its abundance ratio with $^{247}$Cm in the Early Solar System can be used as direct observational constraint of the last $r$-process event that seeded the presolar nebula~\cite{Ben21}.
+    The NEEC of the high-spin isomeric state in $^{129}$Sb can alter the decay path back to stability via bypassing the high-spin isomeric state in $^{129}$Te that has a longer half-life than its respective ground-state before the reaction flow merges back at $^{129}$In.
+    Interestingly, \textit{IF} there was also a negative-parity high-spin isomer in $^{129}$I with similar configuration as in $^{129}$Sb (the configuration of the (19/2$^-$) state is $\pi$g$_{7/2}\otimes\nu$h$_{11/2}\otimes\nu$s$_{1/2}$), the main decay path under terrestrial conditions would bypass the long-lived low-spin ground-state of $^{129}$I and thus produce in astrophysical calculations a much lower abundance of this isotope than in the NEEC case.
+%%%%%%%%%%%%%%%%%%%%
+
+    \subsection{\label{discrepancy} Discrepancy in Argonne National Laboratory NEEC Observation}
+    In 2018 Argonne National Laboratory reported the first observation of NEEC in  $^{93}Mo$ \cite{Chiara2018}, and was claimed as the first demonstration of NEEC.
+    In this experiment NEEC was triggered in $^{93m}Mo$ via a beam-based experiment to determine the probability and cross-section of the NEEC process.
+    The approach taken for this measurement was to use a $^{90}Zr + ^{7}Li$ fusion-evaporation reaction to generate the $^{93m}Mo$ isomeric state.
+    To do this a $^{90}Zr$ beam was directed at a $^{7}Li$ target which would produce the isomeric state $^{93m}Mo$ traveling along the direction of the beam at approximately $10\%$ of the speed of light.
+    The $^{93m}Mo$ isomeric state then proceeds along with the beam towards the target materials \ref{fig:argonne_neec_exp}.
+    When interacting with the lighter target material electrons are stripped off creating an average $^{93}Mo$ charge state between +32 and +36.
+    Further collisions cause the ion of interest to lose additional kinetic energy and provides free electrons at a continuum of energies.
+
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[scale=.4]{argonne_neec_exp.png}
+        \end{center}
+        \caption{Target layers used for Argonne experiment \cite{Chiara2018}}
+        \label{fig:argonne_neec_exp}
+    \end{figure}
+
+    Given the large number of free electrons, some will be at the needed NEEC energies allowing the energy matching condition to be satisfied to stimulate NEEC.
+    The team then proceeded to run this process inside the Gammasphere $\gamma$-ray spectrometer to look for the characteristic $\gamma$-rays at 268 keV, 685 keV and 1478 keV which would indicate a isomeric depletion due to a NEEC triggered transition to a higher isomeric state and the subsequent quick decay of the state down to the ground state of $^{93}Mo$.
+    The experiment also triggered on 2425keV $\gamma$-rays to confirm that the nucleus had reached the $^{93m}Mo$ state.
+    Note that each step of this process relies on statistical probabilities of how many isomers of $^{93m}Mo$ are initially produced, how many free electrons at the correct NEEC energy are available and how many ions of $^{93}Mo$ are of the correct charge state.
+    Also of note is that these measurements were not directly measuring NEEC but attempting to indirectly observe the process by observing the rate of isomeric depletion.
+    On final analysis it was determined that the NEEC probability was $P_{exc} = 0.010(3)$ which is considered to be quite large \cite{Wu2019}.
+
+    A great deal of interested was generated in the theory community following this anomolous result.
+    Theoretical calculations were therefore performed for the NEEC cross-section of $^{93m}Mo$ for the Agronne experiments data by the Heidelberg group~\cite{Wu2019}.
+    The goal of this was to determine if NEEC had been observed or if there might be an alternative explanation as to the observance of the isomeric depletion in $^{93m}Mo$.
+    NEEC probabilities for the dominant 648 recombination channels as a function of charge state and ion energy in the $^{93m}$Mo experiment were evaluated.
+    The conclusions of this detailed theoretical analysis predict a NEEC probability to be $P_{exc}\approx 5 \times 10^{-11}$ - nearly 9 orders of magnitude smaller than the observed probability in Ref.~\cite{Chiara2018}.
+    The cause of the massive discrepancy between these two values is still unknown, however the authors of Ref.~\cite{Wu2019} suggest that the observed isomer depletion may be due to non-resonant nuclear excitations resulting from the relatively large energies involved in the in-beam experimental environment.
+
+    This remains an open question and one that this research works towards resolving.
+    In the following sections an outline for how an experimental setup could be constructed in order to try to remove some of the discrepancy between the Argonne experiment and the work done by the Heidelberg group.
+    To this end a method of triggering NEEC using decay spectroscopy in an Electron Beam Ion Trap at the TITAN facility will be established.
+    This method will have a number of benefits over the Argonne experiment including being able to selectively and precisely trigger the NEEC process, while keeping the total energy of the experiment below the transition energy, thus eliminating the possibility for a non-resonance excitation.
+
+
+\end{document}
