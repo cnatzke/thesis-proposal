@@ -35,58 +35,47 @@ This work uses the GRIFFIN spectrometer housed in the ISAC-I experimental hall l
 \end{center}
 
 Large scale detector arrays for $\gamma$-ray measurements provide a powerful and robust tool for studying unstable nuclei through radioactive decay and nuclear spectroscopy at radioactive ion beam facilities \cite{garnsworthy_griffin_2019}. 
-The Gamma-Ray Infrastructure For Fundamental Investigations of Nuclei (GRIFFIN) is a high-efficiency $\gamma$-ray spectrometer composed of sixteen large-volume clover-type High Purity Germanium (HPGe) detectors located in the ISAC-I experimental hall at TRIUMF. 
+The Gamma-Ray Infrastructure For Fundamental Investigations of Nuclei (GRIFFIN) is a Compton-suppressed, high-efficiency $\gamma$-ray spectrometer composed of sixteen large-volume clover-type High Purity Germanium (HPGe) detectors located in the ISAC-I experimental hall at TRIUMF. 
 The detectors are arranged to cover sixteen of the eighteen faces of a rhombicuboctahedron with the front faces of the detectors able to be set 110 or 145 mm from the beam implantation location at the centre of the array. 
+One of the vacant faces is used for the incoming low-energy RIB from ISAC-I and the other, opposite face is used for the tape collection system that removes long-lived activity from the implantation chamber at the end of a measurement cycle \cite{garnsworthy_griffin_2019}. Each clover contains four large-volume HPGe crystals aligned to the tape system where the radioactive beam is implanted and decays. 
+The western hemisphere of GRIFFIN is shown in Figure \ref{fig:griffin_westhemi} where the upstream beam line can be seen on the rightmost edge of the image. 
 
+\begin{center}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[]{griffin_westhemi.jpg}
+    \end{center}
+    \caption{Western hemisphere of GRIFFIN in optimized-peak-to-total mode taken during TRIUMF photowalk 2018. Image by Matthias Le Dall}
+    \label{fig:griffin_westhemi}
+  \end{figure}
+\end{center}
 
-The TITAN groups' experimental setup consists of 5 traps, Cooler Penning Trap (CPET), Measurement Penning Trap (MPET), Multi-reflection Time of Flight Mass Spectrometer (MR-TOF-MS), Electron Beam Ion Trap (EBIT) as well as a Radio Frequency Quadapole (RFQ) linear Paul trap which functions as a cooler and buncher.  
-These systems can operate alone or in conjunction such as where the RFQ cools and bunches the beam before passing it off to the MR-TOF-MS.  
-From there the MR-TOF-MS can clean the beam for a specific mass to great precision before passing it off to the EBIT for further charge breeding and possible injection into MPET or CPET.  
-The ability for TITAN to combine instruments for purification and trapping gives it a unique ability to probe fundamental nuclear and atomic properties.
+Each GRIFFIN clover is surrounded by a set of bismuth germanate (BGO) active Compton suppression shields used to detect $\gamma$-rays that have scattered out of a HPGe crystal and 511 keV $\gamma$-rays created via pair production. 
+The BGO shields are made of a high-density, large atomic number ($Z$ = 83 for Bi) scintillator coupled to a photomultiplier tube (PMT) to create a detector ideally suited to measure escaping $\gamma$-rays due to its high $\gamma$-ray interaction cross-section. 
 
-\subsection{The TITAN Electron-Beam Ion Trap (EBIT)}
+The GRIFFIN spectrometer has two distinct operating configurations based on the relative position of the BGO suppression shields and HPGe clover faces to the centre of the array. 
+The first of which named "high-efficiency mode" is when the clovers are 110 mm radially distant from the centre of the array and the front BGO shields are pulled back, shown in the top panel of Figure \ref{fig:griffin_modes}, 
 
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[scale=.3]{EBIT1.png}
-  \end{center}
-  \caption{Schematic view of EBIT}
-  \label{fig:EBIT_CUTOUT}
-\end{figure}
+\begin{center}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[]{griffin_modes.jpg}
+    \end{center}
+    \caption{Two possible configurations of the GRIFFIN spectrometer. The beam is delivered from the left. The Pb wall shielding the tape box can be seen on the right. Upper panel showing PACES in the upstream (left) half of the chamber and the fast scintillator in the downstream (right) chamber. In the ‘High-efficiency’ mode, the HPGe detectors are at 11 cm and the LaBr(Ce) detectors at 12.5 cm from the implantation point on the tape. Lower panel with SCEPTAR in the upstream and downstream chambers. In the ‘Optimized peak-to-total’ mode, the HPGe and LaBr(Ce) detectors are retracted to 14.5 cm and 13.5 cm, respectively, in order that they can be fully Compton and background suppressed with BGO shields. The 20 mm Delrin absorber is also installed in the lower panel. Figure taken from Ref. \cite{garnsworthy_griffin_2019}.}
+    \label{fig:griffin_modes}
+  \end{figure}
+\end{center}
 
-The electron-beam ion trap serves to generate highly-charged ions (HCIs) by means of an intense electron beam causing electron-impact ionization and trap them via electro-magnetic fields.  
-The TITAN EBIT was built at the Max-Planck-Institute for Nuclear Physics (MPI-K) in Heidelberg from 2004-2006 \cite{TITAN_EBIT_2010}. 
-The EBIT uses a very strong (near 6T) magnetic field generated by pair of coils in a Helmholtz geometry to compress the electron beam creating a very high current density to facilitate the electron-impact ionization.  
-The HCIs are trapped in the axial direction by a symmetric electrostatic quadrupole potential well which is achieved via applying a potential to the EBIT's drift tubes.  
-Radial confinement is handled by the electron-beam space-charge potential along with the previously mentioned strong magnetic field \cite{TITAN_EBIT_2010}.
+% TODO: Add griffin clover graphic
+%\begin{center}
+%  \begin{figure}[H]
+%    \begin{center}
+%      \includegraphics[]{isac_i_facility.png}
+%    \end{center}
+%    \caption{Schematic view of the TRIUMF-ISAC facility \cite{Dilling2014}, including the target ion-source, the high resolution mass separator, and various detection stations.}
+%    \label{fig:ISAC_HALL}
+%  \end{figure}
+%  \end{center}
 
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[scale=.3]{ebit_schematic.png}
-  \end{center}
-  \caption{Schematic view of EBIT \cite{PALFFY_THESIS}}
-  \label{fig:schematic_ebit}
-\end{figure}
-
-(Fig. \ref{fig:schematic_ebit} )
-**DESCRIBE  THRESHOLD CHARGE BREEDING**
-For a Penning trap the relative precision of the mass measurement is proportional to the charge state of the ion which can be approximated via (Eq. \ref{eq:ebit_resolving_power} \cite{TITAN_EBIT_2010})
-
-
-\begin{equation}
-  \frac{\delta m}{m} \propto \frac{m}{qB} \frac{1}{T_{RF}} \frac{1}{\sqrt{N}}
-  \label{eq:ebit_resolving_power}
-\end{equation}
-
-here $T_{RF}$ represents the excitation time in the magnetic field $B$ with $N$ representing the number of measurements.  From this it is clear the powerful benefits inherent in using an EBIT to further charge breed ions before passing them to a Penning trap \cite{TITAN_EBIT_2010}.
-
-The time to breed to a specific charge state is given by (Eq. \ref{eq:ebit_stripping_time})
-\begin{equation}
-  \tau_{i}(q) = \sum_{q'=0}^{q-1}\langle n_e v_e \sigma^{I}_{q', q'+1} \rangle^{-1}
-  \label{eq:ebit_stripping_time}
-\end{equation}
-
-where $\sigma^{I}_{q', q'+1}$ is the cross section for single ionization and $n_e v_e$ is equal to the current density divided by the elementary charge $\frac{j_e}{e}$ \cite{SPRINGER_1997}.
-
-
+% ------------------------------------
 \end{document}
