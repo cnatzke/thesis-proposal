@@ -89,14 +89,11 @@ The GRIFFIN data acquisition system (DAQ) uses custom-designed digital electroni
 The modules were designed to handle high-rate data collection with each crystal counting at a rate of up to 50 kHz and process signals from the HPGe crystals, BGO suppression shields, and any ancillary detector used in conjunction with the clovers. 
 The DAQ operates using three different levels of electronics; analogue-to-digital converters, secondary collection modules, and a primary collector module. The lowest level of the DAQ that processes raw detector outputs is made of GRIF-16 analogue-to-digital converters (ADC) that sample the raw analogue detector output at 100 MHz and convert the signal into a digital signal.
 The ADCs pass the converted signal to the GRIF-C secondary collection modules that act as multiplexer for multiple input GRIF-16s. 
-Finally the output signal of the secondary collectors are passed to a single GRIF-C primary collector that filters the accumulated data from the lower levels according to user specified logic to accept or reject the singles to be written out. 
+Finally, the output signal of the secondary collectors are passed to a single GRIF-C primary collector that filters the accumulated data from the lower levels according to user specified logic to accept or reject the singles to be written out. 
 All three levels of the DAQ are synchronized to a GRIF-Clk Clock module that houses a Symmetricom Model SA.45s Chip-Sized Atomic Clock (CSAC) that produces a 10 MHz reference signal. 
 The reference signal is used to generate a 50 MHz primary clock single that is fanned-out through secondary GRIF-Clk modules to all the collectors and digitizers in the system \cite{garnsworthy_griffin_2017}.
 
-
-
-
-The GRIFFIN data acquisition system (DAQ) uses the Maximum Integrated Data Acquisition System (MIDAS) 
+Events that pass the primary collector are written to disk using the Maximum Integrated Data Acquisition System (MIDAS) frontend \cite{ritt_midas_1997}, developed by TRIUMF and the Paul Scherrer Institute. Data are written to disk using the GRIFFIN event format \cite{noauthor_griffin_nodate}.
 
 % ------------------------------------
 \end{document}
