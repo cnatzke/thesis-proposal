@@ -3,9 +3,9 @@
 
 \chapter{The GRIFFIN Spectrometer at TRIUMF}
 
-%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------
 \subsection{TRIUMF Rare Isotope Beam Facility}
-%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=0.95\linewidth]{triumf_cyclotron_construction_1972.jpg}
@@ -20,24 +20,26 @@ Since then the science program has grown to include nuclear physics, particle ph
 TRIUMF houses the world's largest cyclotron \cite{dilling_isac_2014} capable of accelerating protons up to 520 MeV before they are delivered to the experimental halls, via one of four beam lines, for direct use or to create secondary radioactive isotope beams of pions, muons, or radioactive isotopes. 
 This work uses the GRIFFIN spectrometer housed in the ISAC-I experimental hall located on the TRIUMF-ISAC-I experimental hall. 
 
-%%%%%%%%%%%%%%%%%%%%
-\subsection{The GRIFFIN Spectrometer}
-%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=.18]{isac_schematic.png}
+  \end{center}
+  \caption{Schematic view of the TRIUMF-ISAC facility \cite{dilling_isac_2014}, including the target ion-source, the high resolution mass separator, and various detection stations.}
+  \label{fig:ISAC_HALL}
+\end{figure}
+\end{center}
 
-%\begin{center}
-%\begin{figure}[H]
-%  \begin{center}
-%    \includegraphics[scale=.18]{isac_i_facility.png}
-%  \end{center}
-%  \caption{Schematic view of the TRIUMF-ISAC facility \cite{Dilling2014}, including the target ion-source, the high resolution mass separator, and various detection stations.}
-%  \label{fig:ISAC_HALL}
-%\end{figure}
-%\end{center}
+%------------------------------------------
+\subsection{The GRIFFIN Spectrometer}
+%------------------------------------------
 
 Large scale detector arrays for $\gamma$-ray measurements provide a powerful and robust tool for studying unstable nuclei through radioactive decay and nuclear spectroscopy at radioactive ion beam facilities \cite{garnsworthy_griffin_2019}. 
 The Gamma-Ray Infrastructure For Fundamental Investigations of Nuclei (GRIFFIN) is a Compton-suppressed, high-efficiency $\gamma$-ray spectrometer composed of sixteen large-volume clover-type High Purity Germanium (HPGe) detectors located in the ISAC-I experimental hall at TRIUMF. 
-The detectors are arranged to cover sixteen of the eighteen faces of a rhombicuboctahedron with the front faces of the detectors able to be set 110 or 145 mm from the beam implantation location at the centre of the array. 
-One of the vacant faces is used for the incoming low-energy RIB from ISAC-I and the other, opposite face is used for the tape collection system that removes long-lived activity from the implantation chamber at the end of a measurement cycle \cite{garnsworthy_griffin_2019}. Each clover contains four large-volume HPGe crystals aligned to the tape system where the radioactive beam is implanted and decays. 
+Each clover contains four n-type HPGe crystals of 60 mm diameter before shaping and 90 mm in length which are tapered towards the front face to facilitate closer packing within the clover housing \cite{rizwan_characteristics_2016}.
+The four crystals operating voltage is between 3.5 to 4 kV at 95 K and share the same cryostat cooled by a dewar of liquid nitrogen that is filled every 8 hours. 
+The clover detectors, and any ancillary detector, are placed in an aluminum rhombicuboctahedron support structure where up to sixteen of the eighteen faces of the rhombicuboctahedron are covered by the HPGe clovers.
+The remaining two faces are used for the incoming low-energy RIB from ISAC-I and the tape collection system that removes long-lived activity from the implantation chamber at the end of a measurement cycle \cite{garnsworthy_griffin_2019}. 
 The western hemisphere of GRIFFIN is shown in Figure \ref{fig:griffin_westhemi} where the upstream beam line can be seen on the rightmost edge of the image. 
 
 \begin{center}
@@ -60,11 +62,14 @@ The western hemisphere of GRIFFIN is shown in Figure \ref{fig:griffin_westhemi} 
   \end{figure}
 \end{center}
 
-Each GRIFFIN clover is surrounded by a set of bismuth germanate (BGO) active Compton suppression shields used to detect $\gamma$-rays that have scattered out of a HPGe crystal and 511 keV $\gamma$-rays created via pair production. 
+Each GRIFFIN clover is surrounded by a set of high-efficiency bismuth germanate (BGO) active Compton suppression shields.
 The BGO shields are made of a high-density, large atomic number ($Z$ = 83 for Bi) scintillator coupled to a photomultiplier tube (PMT) to create a detector ideally suited to measure escaping $\gamma$-rays due to its high $\gamma$-ray interaction cross-section. 
+The Compton shields detect Compton-scattered $\gamma$-rays that have scattered out of a HPGe crystal, 511 keV $\gamma$-rays created via pair production, and provide passive shielding from background radiation originating outside the array. 
+Singles from the suppression shields are used as a veto to reject incomplete scatter events in the HPGe crystals thereby increasing the sensitivity and signal-to-noise ratio of the array. 
+The shields are composed of three individual components; a front plate, a side shield, and a back catcher, all of which can be moved independently providing freedom in the physical arrangement of the detector array. 
 
 The GRIFFIN spectrometer has two distinct operating configurations based on the relative position of the BGO suppression shields and HPGe clover faces to the centre of the array. 
-The first of which named "high-efficiency mode" is when the clovers are 110 mm radially distant from the centre of the array and the front BGO shields are pulled back, shown in the top panel of Figure~\ref{fig:griffin_modes}, to facilitate a large solid angle coverage and greater absolute detection efficiency. 
+The first mode named "high-efficiency mode" is when the clovers are 110 mm radially distant from the centre of the array and the front BGO shields are pulled back, shown in the top panel of Figure~\ref{fig:griffin_modes}, to facilitate a large solid angle coverage and greater absolute detection efficiency. 
 The second mode, called "optimized peak-to-total" mode shown in the bottom panel of Figure~\ref{fig:griffin_modes}, is when the HPGe clovers are 145 mm from the centre of the array and the front shield plates of the BGO suppressors are rolled forward to form a complete suppression shield around each HPGe clover. 
 
 \begin{center}
@@ -77,6 +82,21 @@ The second mode, called "optimized peak-to-total" mode shown in the bottom panel
   \end{figure}
 \end{center}
 
+%------------------------------------------
+\subsection{Data Acquisition}
+%------------------------------------------
+The GRIFFIN data acquisition system (DAQ) uses custom-designed digital electronic modules in a three tiered system \cite{garnsworthy_griffin_2017}. 
+The modules were designed to handle high-rate data collection with each crystal counting at a rate of up to 50 kHz and process signals from the HPGe crystals, BGO suppression shields, and any ancillary detector used in conjunction with the clovers. 
+The DAQ operates using three different levels of electronics; analogue-to-digital converters, secondary collection modules, and a primary collector module. The lowest level of the DAQ that processes raw detector outputs is made of GRIF-16 analogue-to-digital converters (ADC) that sample the raw analogue detector output at 100 MHz and convert the signal into a digital signal.
+The ADCs pass the converted signal to the GRIF-C secondary collection modules that act as multiplexer for multiple input GRIF-16s. 
+Finally the output signal of the secondary collectors are passed to a single GRIF-C primary collector that filters the accumulated data from the lower levels according to user specified logic to accept or reject the singles to be written out. 
+All three levels of the DAQ are synchronized to a GRIF-Clk Clock module that houses a Symmetricom Model SA.45s Chip-Sized Atomic Clock (CSAC) that produces a 10 MHz reference signal. 
+The reference signal is used to generate a 50 MHz primary clock single that is fanned-out through secondary GRIF-Clk modules to all the collectors and digitizers in the system \cite{garnsworthy_griffin_2017}.
+
+
+
+
+The GRIFFIN data acquisition system (DAQ) uses the Maximum Integrated Data Acquisition System (MIDAS) 
 
 % ------------------------------------
 \end{document}
