@@ -7,24 +7,34 @@
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Nuclear Equation of State}
 %%%%%%%%%%%%%%%%%%%%
-The Nuclear Equation of State (EOS) governs the properties of nuclear matter and defines the properties of neutron-rich nuclei, the structure of neutron stars, supernova explosions and compact object mergers. \cite{knupfer_scaling_1985} The EOS is well constrained for symmetric nuclear matter, matter where the number of protons and neutrons are roughly equal, but the properties for neutron rich matter require further investigation. \cite{danielewicz_determination_2002} 
-The properties of interest are encoded in the nuclear symmetry energy $S(n)$ and the slope parameter $L$. Atomic nuclei provide a terrestrial system to study the slope parameter using the neutron-skin thickness, the difference between the point-neutron and point-proton radii, mathematically denoted as $R_{skin} = R_n - R_p$. \cite{tsang_constraints_2012} A direct experimental measurement of $R_{skin}$ is extremely challenging and can be extracted by its correlation to collective isovector observables at low energies. \cite{birkhan_electric_2017} One such observable is the dipole polarizability $\alpha_D$ \cite{birkhan_electric_2017}.
+The Nuclear Equation of State (EOS) governs the properties of nuclear matter and defines the properties of neutron-rich nuclei, the structure of neutron stars, supernova explosions and compact object mergers \cite{knupfer_scaling_1985}. 
+The EOS is well constrained for symmetric nuclear matter, matter where the number of protons and neutrons are roughly equal, but the properties for asymmetric, neutron rich matter require further investigation \cite{danielewicz_determination_2002}.
+The largest uncertainties in the EOS for neutron rich matter lie in the limited knowledge of the symmetry energy $J$, the difference between the energies of neutron and nuclear matter at saturation density, and the slope of the symmetry energy $L$, which relates the pressure of neutron matter. 
+
+
+Atomic nuclei provide a terrestrial probe of the symmetry energy $J$, where it contributes to the formation of neutron skins in systems with a neutron excess. 
+$J$ and $L$ can be correlated with isovector collective excitations of nucleus, such as the pygmy dipole resonance \cite{carbone_constraints_2010} and giant dipole resonances (GDRs) \cite{trippa_giant_2008}, via calulations based on energy density functionals (EDfs) suggesting the neutron skin thickness, the difference between the point-neutron and point-proton radii $R_{skin} = R_n - R_p$ \cite{tsang_constraints_2012}, could be constrained by measuring isovector collective observables at low energy \cite{krasznahorkay_excitation_1999}.
+A direct experimental measurement of $R_{skin}$ is extremely challenging and can be extracted by its correlation to collective isovector observables at low energies \cite{birkhan_electric_2017}. 
+One such observable is the dipole polarizability $\alpha_D$ \cite{birkhan_electric_2017}, representing an experimentally viable tool to constrain the EOS of neutron matter and the physics of neutron stars. 
+% TODO : Add citations to last sentence. 6-11 from birkham
 
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Electric Polarizability and Magnetic Susceptibility}
 %%%%%%%%%%%%%%%%%%%%
-
+The concept of polarizability, a fundamental concept in physics the describes how applied electric or magnetic fields induce an electric or magnetic dipole, or higher-order multipole, moment in the matter of interest \cite{jackson_classical_1999}, plays a large role in nuclear physics observables across a broad range of interests.
 Nuclear DFT calculations suggest a strong correlation between $\alpha_D$ and the neutron radius \cite{hagen_neutron_2016}, $R_{n}$. 
-Polarizability is a fundamental concept in physics the describes how applied electric or magnetic fields induce an electric or magnetic dipole, or higher-order multipole, moment in the matter of interest.\cite{jackson_classical_1999} The concept of polarizability plays a large role in nuclear physics observables across a broad range of interests. For example the static dipole polarization of the ground and excited state shape of atomic nuclei is influenced by the state's coupling to higher-energy collective modes, like the giant dipole resonance and pygmy dipole resonance, via virtual excitations. As described in \cite{soderstrom_electromagnetic_2020}, the static dipole polarizability, $\alpha_D$ can be obtained from the photonuclear population of excited states, given by
+The static dipole polarization of the ground and excited state shape of atomic nuclei is influenced by the state's coupling to higher-energy collective modes, like the giant dipole resonance and pygmy dipole resonance, via virtual excitations. 
+As described in \cite{soderstrom_electromagnetic_2020}, the static dipole polarizability, $\alpha_D$ can be obtained from the photonuclear population of excited states, given by
 
 \begin{equation} \label{eqn:scalar_dipole_polarizability}
     \alpha_{D,E1} = 2 e \sum_n \frac{|\langle I_0 || E1 || I_n \rangle |^2}{E_n - E_0}
 \end{equation}
 
 where $I_0$, $E1$, and $I_n$ are the matrix elements for the ground state, electric dipole transition, and excited state respectively; $e$ is the elementary charge of the electron; and $E_n$ is the energy of the state. 
-The value of $alpha_D$, and the analogous magnetic susceptibility $\chi$, in atomic and nuclear systems spans many orders of magnitude depending on the scale of interest, for example the magnetic susceptibility of a nucleus is twelve orders of magnitude smaller than that of an atom. \cite{knupfer_scaling_1985}
+The value of $alpha_D$, and the analogous magnetic susceptibility $\chi$, in atomic and nuclear systems spans many orders of magnitude depending on the scale of interest, for example the magnetic susceptibility of a nucleus is twelve orders of magnitude smaller than that of an atom \cite{knupfer_scaling_1985}.
 
-Following the explanation in \cite{soderstrom_electromagnetic_2020} the polarizability can be expanded past the scalar case to include separate tensor components describing higher-order electric and magnetic multipoles. Using the nuclear structure framework these off diagonal polarizabilities appear as very weak second-order electromagnetic processes that can be expressed analogously to Eq. (\ref{eqn:scalar_dipole_polarizability}) in terms of either electric and magnetic components or different multipolarities. 
+Following the explanation in \cite{soderstrom_electromagnetic_2020} the polarizability can be expanded past the scalar case to include separate tensor components describing higher-order electric and magnetic multipoles. 
+Using the nuclear structure framework these off diagonal polarizabilities appear as very weak second-order electromagnetic processes that can be expressed analogously to Eq. (\ref{eqn:scalar_dipole_polarizability}) in terms of either electric and magnetic components or different multipolarities. 
 
 \begin{equation} \label{eqn:m2e2_dipole_polarizability}
     \alpha_{M2E2} = \sum_n \frac{\langle I_f || E2 || I_n \rangle \langle I_n || M2 || I_i \rangle}{E_n - \omega}
@@ -37,7 +47,7 @@ or
 \end{equation}
 
 where $\omega$ is the interference frequency of the emitted gamma-rays and is approximated to one half of the initial energy. 
-This second-order electromagnetic process was discussed in the doctorate dissertation of Maria G\"oppert-Mayer \cite{goppert-mayer_uber_1931} where the estimated relative probability of two-photon absorption to the single-photon process is $10^{-7}$. 
+This second-order electromagnetic process was discussed in the doctorate dissertation of Maria G\"oppert-Mayer~\cite{goppert-mayer_uber_1931} where the estimated relative probability of two-photon absorption to the single-photon process is $10^{-7}$. 
 
 The electric dipole polarizability has been measured for a variety of stable isotopes, $^{48}$Ca \cite{birkhan_electric_2017}, $^{120}$Sn \cite{hashimoto_dipole_2015}, and $^{208}$Pb \cite{tamii_complete_2011} using proton inelastic scattering, and $\alpha_D$ has only been measured for one short-lived nucleus, $^{68}$Ni. \cite{rossi_measurement_2013}
 At this time the electric dipole polarizability for a short lived nuclear state has not been experimentally measured, but using the \textit{transition} electric polarizabilty, the difference in $\alpha_D$ between the two states, and the ground state polarizabilty the polarizabilty of a short-lived nuclear state can be measured.

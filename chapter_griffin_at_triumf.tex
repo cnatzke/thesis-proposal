@@ -93,7 +93,8 @@ Finally, the output signal of the secondary collectors are passed to a single GR
 All three levels of the DAQ are synchronized to a GRIF-Clk Clock module that houses a Symmetricom Model SA.45s Chip-Sized Atomic Clock (CSAC) that produces a 10 MHz reference signal. 
 The reference signal is used to generate a 50 MHz primary clock single that is fanned-out through secondary GRIF-Clk modules to all the collectors and digitizers in the system \cite{garnsworthy_griffin_2017}.
 
-Events that pass the primary collector are written to disk using the Maximum Integrated Data Acquisition System (MIDAS) frontend \cite{ritt_midas_1997}, developed by TRIUMF and the Paul Scherrer Institute. Data are written to disk using the GRIFFIN event format \cite{noauthor_griffin_nodate}.
+Events that pass the primary collector are written to disk using the Maximum Integrated Data Acquisition System (MIDAS) frontend \cite{ritt_midas_1997}, developed by TRIUMF and the Paul Scherrer Institute. 
+Similar to the rest of the GRIFFIN DAQ MIDAS allows for high-rate data to be written to disk, and the data are written to disk using the GRIFFIN event format \cite{griffin_griffin_nodate}. 
 
 % ------------------------------------
 \end{document}
