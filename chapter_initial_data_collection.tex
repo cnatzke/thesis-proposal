@@ -1,0 +1,51 @@
+\documentclass[cnatzke_thesis_proposal.tex]{subfiles}
+\begin{document}
+
+\chapter{Data Analysis}
+
+%------------------------------------------
+\subsection{First Data Collection November 2017}
+%------------------------------------------
+Attempting to observe two-photon decay with GRIFFIN is very challenging technically and requires multiple iterations with each subsequent data collection reducing relevant backgrounds. 
+The first attempt at measuring two-photon decay with GRIFFIN occurred in November 2017 using a $^{90}$Sr source already present at TRIUMF and was used to evaluate the feasibility of measuring two-photon transitions and assess the background level in the array. 
+All sixteen GRIFFIN clovers were present in the array in high-efficiency mode, the BGO suppression shields had not been installed yet, and the $^{90}$Sr puck source was roughly aligned to the centre of the array using a source holder. 
+X-ray absorbers, composed of 0.1 mm layer of Tantalum (Ta), 0.25 mm layer of Tin (Sn), and 0.25 mm layer of Copper (Cu), were placed in front of the clover faces with the Cu layer facing the clover. 
+DAQ rates are detailed in Table~\ref{tab:daq_rates}.
+\begin{table}[]
+  \begin{tabular}{c|ccc}
+  \textbf{Collection Date} & \textbf{Crystal Rate} & \textbf{Total Array Rate} & \textbf{Data Rate} \\ \hline
+  Nov 2017                 & 15-22 kHz             & 625 kHz                   & 26.6 MB/s         
+  \end{tabular}
+  \label{tab:daq_rates}
+\end{table}
+
+
+%------------------------------------------
+\subsection{Data Collection 2019?}
+%------------------------------------------
+% new custom souce holder. 
+
+Prior to this data collection the $^{90}$Sr source had the activity mounted on an industrial ceramic backing causing a significant low-energy background that obscured any two-photon peak. 
+The high beta activity of the source caused the Tungsten dopant in the ceramic to flouresce x-rays, of characteristic energy 57 and 65 keV, measured primarily in detectors directly behind the ceramic backing of the source. 
+Furthermore, the ceramic and the bronze source holder were made of sufficiently high-Z materials such that the Bremsstrahlung radiation from the interaction of the betas released from the source masked any two-photon signal that GRIFFIN could measure. 
+
+To remove the Tungsten x-rays and reduce the Bremsstrahlung radiation a new custom source was fabricated where the $^{90}$Sr activity was placed in the centre of a DELRIN (polyoxymethylene) sphere. 
+A commercially obtained 20 MBq liquid Strontium Chloride, dissolved in 0.1M HCL, source was purchased and the source was evaporated into the centre of a DELRIN sphere, which was then sealed. 
+Figure~\ref{fig:source_holder} shows the source holder pre-source evaporation. 
+Since there is no high-Z material in the source holder the Bremsstrahlung radiation is strongly reduced compared to the original source. 
+
+% TODO Add picture
+
+%\begin{center}
+%  \begin{figure}[H]
+%    \begin{center}
+%      \includegraphics[scale=.18]{isac_schematic.png}
+%    \end{center}
+%    \caption{Left: pc}
+%    \label{fig:source_holder}
+%  \end{figure}
+%  \end{center}
+
+
+% ------------------------------------
+\end{document}
