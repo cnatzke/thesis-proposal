@@ -11,6 +11,7 @@ The first attempt at measuring two-photon decay with GRIFFIN occurred in Novembe
 All sixteen GRIFFIN clovers were present in the array in high-efficiency mode, the BGO suppression shields had not been installed yet, and the $^{90}$Sr puck source was roughly aligned to the centre of the array using a source holder. 
 X-ray absorbers, composed of 0.1 mm layer of Tantalum (Ta), 0.25 mm layer of Tin (Sn), and 0.25 mm layer of Copper (Cu), were placed in front of the clover faces with the Cu layer facing the clover. 
 DAQ rates are detailed in Table~\ref{tab:daq_rates}.
+
 \begin{table}[]
   \begin{tabular}{c|ccc}
   \textbf{Collection Date} & \textbf{Crystal Rate} & \textbf{Total Array Rate} & \textbf{Data Rate} \\ \hline
@@ -36,15 +37,31 @@ Since there is no high-Z material in the source holder the Bremsstrahlung radiat
 
 % TODO Add picture
 
-%\begin{center}
-%  \begin{figure}[H]
-%    \begin{center}
-%      \includegraphics[scale=.18]{isac_schematic.png}
-%    \end{center}
-%    \caption{Left: pc}
-%    \label{fig:source_holder}
-%  \end{figure}
-%  \end{center}
+\begin{figure}[htbp]
+  \centering
+  \subfloat{\includegraphics[height=5cm]{source_holder_open.png}}
+  \qquad
+  \subfloat{\includegraphics[height=5cm]{source_holder_closed.png}}
+  \caption{
+    \textit{Left:} DELRIN source holder before $^{90}$Sr activity deposit. The activity will be deposited in the centre of the larger section via evaporation of a Strontium Chloride solution. 
+    \textit{Right:} DELRIN source holder with both halves closed together.
+  }
+  \label{fig:source_holder}
+\end{figure}
+
+A PEEK (polyetheretherketone) source holder was fabricated to hold the sphere containing the $^{90}$Sr activity in the centre of the array and the Ta/Sn/Cu X-ray absorbers were placed in the open faces of the GRIFFIN rhombicuboctahedron to increase the passive shielding of the array. This configuration is shown in Figure~\ref{fig:source_holder_in_griffin}. The source holder was aligned using a laser point placed on the upstream beamline, shown in Figure~\ref{fig:source_holder_alignment}.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat{\includegraphics[height=5cm]{custom_90Sr_source.jpg}}
+  \qquad
+  \subfloat{\includegraphics[height=5cm]{beamline_xray_absorbers.png}}
+  \caption{
+    \textit{Left:} Photograph of $^{90}$Sr source and source holder aligned to the centre of GRIFFIN. Ta/Sn/Cu X-ray absorbers were placed in the opening faces of the GRIFFIN rhombicuboctahedron to help reduce room background and increase passive shielding.
+    \textit{Right:} Photograph of $^{90}$Sr holder looking upstream. The red arrow points to the laser pointer used to align the source sphere.
+  }
+  \label{fig:source_holder_in_griffin}
+\end{figure}
 
 
 % ------------------------------------
