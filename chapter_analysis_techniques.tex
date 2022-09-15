@@ -1,0 +1,25 @@
+\documentclass[cnatzke_thesis_proposal.tex]{subfiles}
+\begin{document}
+
+\chapter{Experimental Methods}
+
+%------------------------------------------
+\subsection{Data Sorting}
+%------------------------------------------
+GRIFFIN data is written to disk according to the GRIFFIN event file format, a form of the general MIDAS file format (see Section~\ref{sec:data_acquisition}).
+To properly analyze the data files they must first be unpacked using the analysis package GRSISort~\cite{bildstein_griffincollaborationgrsisort_2019}, a framework built on top of ROOT~\cite{brun_root-projectroot_2019}.
+GRSISort converts the MIDAS files to ROOT files via a two stage process.
+During the first unpacking stage GRSISort produces a fragment tree, a ROOT file containing time-ordered hits, then by applying an event-building algorithm GRSISort stores hits occurring within a user-specified time coincidence together in another ROOT file called an analysis tree.
+In this work a 1 $\mu$s build window, the time-coincidence condition mentioned previously, was used.
+The analysis trees can then be sorted into histograms via GRSISort or a custom sorting program compiled against the GRSISort libraries.
+
+%------------------------------------------
+\subsection{Data Sorting}
+%------------------------------------------
+
+
+
+
+
+%------------------------------------------
+\end{document}
