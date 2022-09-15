@@ -49,7 +49,7 @@ Since there is no high-Z material in the source holder the Bremsstrahlung radiat
   \label{fig:source_holder}
 \end{figure}
 
-A PEEK (polyetheretherketone) source holder was fabricated to hold the sphere containing the $^{90}$Sr activity in the centre of the array and the Ta/Sn/Cu X-ray absorbers were placed in the open faces of the GRIFFIN rhombicuboctahedron to increase the passive shielding of the array. This configuration is shown in Figure~\ref{fig:source_holder_in_griffin}. The source holder was aligned using a laser point placed on the upstream beamline, shown in Figure~\ref{fig:source_holder_alignment}.
+A PEEK (polyetheretherketone) source holder was fabricated to hold the sphere containing the $^{90}$Sr activity in the centre of the array and the Ta/Sn/Cu X-ray absorbers were placed in the open faces of the GRIFFIN rhombicuboctahedron to increase the passive shielding of the array. This configuration is shown in the left panel of Figure~\ref{fig:source_holder_in_griffin}. The source holder was aligned using a laser point placed on the upstream beamline, shown in the right panel of Figure~\ref{fig:source_holder_in_griffin}.
 
 \begin{figure}[htbp]
   \centering
@@ -62,6 +62,29 @@ A PEEK (polyetheretherketone) source holder was fabricated to hold the sphere co
   }
   \label{fig:source_holder_in_griffin}
 \end{figure}
+
+% todo: add comparision plot of cyclotron on vs off?
+Unlike the previous data collections this dataset was taking during the TRIUMF annual shutdown, when TRIUMF shuts down the main cyclotron and RIB production for maintenance and development, to reduce the neutron flux through the experimental hall. Data collection started in late December 2020 and continued through January 2021 for a total of 500 hours of source data and 300 hours of room background. The HPGe crystals were counting at 2-2.5 kHz during the souce collection and 200 Hz during the room background collection, with a DAQ rate of 1 MB/s and 0.2 MB/s respectively.
+
+\begin{table}[]
+  \begin{tabular}{c|cc}
+  \textbf{Source} & \textbf{Crystal Rate} & \textbf{Data Rate} \\ \hline
+  $^{90}$Sr       & 2.0 - 2.5 kHz         & 1.0 MB/s           \\
+  Room Background & 200 Hz                & 0.2 MB/s          
+  \end{tabular}
+  \caption{Crystal and DAQ rates during the December 2020 data collection}
+  \label{tab:dec2020_rates}
+\end{table}
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{dec2020_gamma_singles.png}
+  \caption{Gamma energy spectrum from 506 hours of $^{90}$Sr source data collection. Prominent room background peaks have been labeled.}
+  \label{fig:dec2020_gamma_singles}
+\end{figure}
+
 
 
 % ------------------------------------
