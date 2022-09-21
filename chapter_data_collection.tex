@@ -4,30 +4,64 @@
 \chapter{Data Analysis}
 
 %------------------------------------------
-\subsection{First Data Collection November 2017}
+\subsection{Data Collection}
+%------------------------------------------
+%------------------------------------------
+\subsection{Data Collection November 2017}
 %------------------------------------------
 Attempting to observe two-photon decay with GRIFFIN is very challenging technically and requires multiple iterations with each subsequent data collection reducing relevant backgrounds. 
-The first attempt at measuring two-photon decay with GRIFFIN occurred in November 2017 using a $^{90}$Sr source already present at TRIUMF and was used to evaluate the feasibility of measuring two-photon transitions and assess the background level in the array. 
+The first attempt at measuring two-photon decay with GRIFFIN occurred in November 2017 using a 19 MBq $^{90}$Sr source already present at TRIUMF and was used to evaluate the feasibility of measuring two-photon transitions and assess the background level in the array. 
+The $^{90}$Sr source was placed in the center of a DELRIN sphere to reduce the number beta particles reaching the HPGe detectors, and the DELRIN sphere was screwed onto a DELRIN source holder rod locking it into position. 
+The source was aligned to the centre of the array using a laser pointer mounted to the upstream beamline.  
 All sixteen GRIFFIN clovers were present in the array in high-efficiency mode, the BGO suppression shields had not been installed yet, and the $^{90}$Sr puck source was roughly aligned to the centre of the array using a source holder. 
-X-ray absorbers, composed of 0.1 mm layer of Tantalum (Ta), 0.25 mm layer of Tin (Sn), and 0.25 mm layer of Copper (Cu), were placed in front of the clover faces with the Cu layer facing the clover. 
+X-ray absorbers, composed of 0.1 mm layer of Tantalum (Ta), 0.25 mm layer of Tin (Sn), and 0.25 mm layer of Copper (Cu), were placed in front of the clover faces with the Cu layer facing the clover to reduce the low energy x-ray flux on the HPGe clovers. 
 DAQ rates are detailed in \ref{tab:daq_rates}.
 
 \begin{table}[]
   \centering
-  \begin{tabular}{ccccc}
-                    & Source          & Crystal Rate & Total Array Rate & Data Rate \\ \hline
-  \textbf{Nov 2017} & $^{90}$Sr       & 15-22 kHz    & 625 kHz          & 26.6 MB/s \\ \hline
-  \textbf{Oct 2018} & $^{90}$Sr       & 4-8 kHz      & 305 kHz          & 12.9 MB/s \\ \hline
-  \textbf{Dec 2019} & $^{90}$Sr       & 2-2.5 kHz    & 20 kHz           & 1.0 MB/s  \\ 
-                    & Room Background & 200 Hz       & -                & 0.2 MB/s  \\ \hline
+  \begin{tabular}{cccccc}
+                    & Source          & Source Activity & Crystal Rate & Total Array Rate & Data Rate \\ \hline
+  \textbf{Nov 2017} & $^{90}$Sr       & ~19 MBq         & 15-22 kHz    & 625 kHz          & 26.6 MB/s \\ \hline
+  \textbf{Jul 2018} & $^{90}$Sr       & ~19 MBq         & 4-8 kHz      & 305 kHz          & 12.9 MB/s \\ \hline
+  \textbf{Dec 2019} & $^{90}$Sr       & ~19 MBq         & 2-2.5 kHz    & 20 kHz           & 1.0 MB/s  \\ 
+                    & Room Background & -               & 200 Hz       & -                & 0.2 MB/s  \\ \hline
   \end{tabular}
   \caption{DAQ data rates for the three data collections}
   \label{tab:daq_rates}
 \end{table}
 
+\ref{fig:sum_spectrum_jul2017} shows the sum spectrum generated from this data collection. 
+There is a peak near the two-photon transition energy of 1760 keV with a centroid of 1764 keV and this peak perfectly matches the energy of a common room background transition from $^{214}$Bi masking any possible two-photon peak. 
+Furthermore, the presence of two peaks, at 57 and 65 keV respectively, indicate the presence of tungsten in the ceramic backing of the button source. 
+With no way to veto Compton scatters and the large x-ray flux coming from the source no two-photon peak could be observed with this source. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{first_collection_sum_spectrum.png}
+  \caption{Sum spectrum from 10 hours of a ~19 MBq $^{90}$Sr source.
+    \textit{Left:} Sum spectrum with the insert showing the region around 1760 keV. There is a peak, but it is from the 1764 keV $^{214}$Bi $\beta$-decay room background. 
+    \textit{Right:} Sum spectrum with the insert showing the 57 and 65 keV x-ray flouresce lines from the tungsten dopant in the source holder ceramic backing.
+  }
+  \label{fig:sum_spectrum_jul2017}
+\end{figure}
 
 %------------------------------------------
-\subsection{Data Collection October 2019}
+\subsection{Data Collection July 2018}
+%------------------------------------------
+Between the November 2017 and this data collection in July 2018 a full complement of BGO Compton suppression shields were installed on GRIFFIN providing an increase in the signal-to-noise ratio of the array and providing an opportunity to observe a two-photon transition. 
+The DELRIN source holder was modified to no longer screw onto the DELRIN support structure, instead the sphere now sat on a bronze hoop allowing the radiation shine from the ceramic backing of the $^{90}$Sr source to be directed upstream and therefore improve the spectral quality for the other 12 clovers
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{jul2018_sum_spectrum.png}
+  \caption{Sum spectrum from 10 hours of a ~19 mbq $^{90}$sr source. The tungsten x-rays are no longer present, but no two-photon peak is visible. The Bremsstrahlung radiation from the ceramic pellet is still too high to observe a two-photon transition.
+  }
+  \label{fig:sum_spectrum_oct2018}
+\end{figure}
+
+%------------------------------------------
+\subsection{Data Collection December 2019}
 %------------------------------------------
 % new custom souce holder. 
 %------------------------------------------
@@ -75,6 +109,7 @@ A PEEK (polyetheretherketone) source holder was fabricated to hold the sphere co
 Unlike the previous data collections this dataset was taking during the TRIUMF annual shutdown, when TRIUMF shuts down the main cyclotron and RIB production for maintenance and development, to reduce the neutron flux through the experimental hall. Data collection started in late December 2020 and continued through January 2021 for a total of 500 hours of source data and 300 hours of room background. The HPGe crystals were counting at 2-2.5 kHz during the source collection and 200 Hz during the room background collection, with a DAQ rate of 1 MB/s and 0.2 MB/s respectively.
 
 \begin{table}[]
+  \centering
   \begin{tabular}{ccc}
                   & \textbf{Crystal Rate} & \textbf{Data Rate} \\ \hline
   $^{90}$Sr       & 2.0 - 2.5 kHz         & 1.0 MB/s           \\
@@ -95,7 +130,7 @@ The new custom source holder allowed for greater peak fidelity and completely re
 \end{figure}
 
 %------------------------------------------
-\subsubsection{Searching for a Two-Photon Peak}
+\subsubsection{Sum Spectrum}
 %------------------------------------------
 
 The two photons released during a two-photon decay event sum to the total energy of the transition, meaning the full energy of the transition should show up as a peak in a sum spectrum. 
@@ -110,7 +145,45 @@ To decrease the influence of random, spurious sum peaks and provide the best cha
   \label{fig:sum_spectrum_dec2019}
 \end{figure}
 
+%------------------------------------------
+\subsubsection{Angular Matrices}
+%------------------------------------------
 
+The angular correlation between the two photons composing nuclear two-photon decay is a powerful tool for assigning the transition polarizability and susceptibility of the excited state, as described by equation~\ref{eqn:angular-distribution}.
+This angular correlation is distinct to two-photon decay and can be used as a condition to isolate two-photon decays from other multiplicity two events; such as internal and external Compton-scattering.
+Both internal and external Compton-scattering are a single photon that doesn't deposit its full energy in a single crystal but rather scatters into another crystal and deposits the remaining energy, making it a multiplicity two event and a peak in the sum spectrum. 
+The difference between internal and external is the source of the photon: internal originates from the centre of the array, for example a $^{207}$Bi source, and external originates from outside the array, most commonly room background $\gamma$-rays as discussed in Section~\ref{sec:room_background}.
+Each of the three different cases, two-photon decay, internal and external Compton-scatters, all have a distinct angular correlation matrix. 
+\ref{fig:external_compton_scatter_schematic}, \ref{fig:internal_compton_scatter_schematic}, and \ref{fig:two_photon_angular_schematic} show the difference between the three angular matrices
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{external_compton_scatter.png}
+  \caption{
+    \textit{Left:} Schematic image of external Compton-scatter. The photon originates from outside the array and then scatters between detectors creating a multiplicity two event. 
+    \textit{Right:} Angular matrix created from 506 hours of $^{90}$Sr data gated on the Compton continuum. 
+  }
+  \label{fig:external_compton_scatter_schematic}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{internal_compton_scatter.png}
+  \caption{
+    \textit{Left:} Schematic image of internal Compton-scatter. The photon originates from the centre of the array and then scatters between detectors creating a multiplicity two event. 
+    \textit{Right:} Angular matrix created from 1 hour of $^{207}$Bi data gated on the 1770 keV peak.
+  }
+  \label{fig:internal_compton_scatter_schematic}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{two_photon_angular_correlation.png}
+  \caption{
+    \textit{Left:} Schematic image of two-photon decay. The two photons originate from the center of the array and both interact in different detectors creating a multiplicity two event. 
+    \textit{Right:} Angular matrix created from 506 hours of $^{90}$Sr data gated on the 1760 keV two-photon peak.
+  }
+  \label{fig:two_photon_angular_schematic}
+\end{figure}
 
 
 % ------------------------------------
