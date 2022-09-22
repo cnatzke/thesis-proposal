@@ -5,6 +5,7 @@
 
 %------------------------------------------
 \subsection{Data Collection}
+\label{sec:data_collection}
 %------------------------------------------
 Attempting to observe two-photon decay with GRIFFIN is very challenging technically and requires a careful understanding and treatment of relevant backgrounds. The following sections will discuss the progress on making a two-photon measurement with GRIFFIN.
 
@@ -135,7 +136,7 @@ The new source reduced the Bremsstrahlung radiation present in the previous data
 \end{figure}
 
 %------------------------------------------
-\subsubsection{Further Analysis}
+\subsection{Further Analysis}
 %------------------------------------------
 Since evidence of a two-photon transition can be seen in \ref{fig:sum_spectrum_dec2019}, the following sections detail further analyses done on the December 2019 data.
 
@@ -205,7 +206,9 @@ The two-photon physics have not been validated with the GRIFFIN simulation at th
 With the reduction of Bremsstrahlung radiation, the most troublesome background is now room background, in particular the $^{214}$Bi $\beta^-$ decay.
 The 1764 keV peak in the sum spectrum from $\gamma$-ray from $^{214}$Bi appears because of external Compton-scattering between detectors (see \ref{sec:angular_matrices}) and can appear as a two-photon event.
 Since the energy-angle distribution of Compton scattering is well understood, this relationship can be mapped to the GRIFFIN experimental angle taking into account the finite detector opening angle and size.
-\ref{fig:compton_angle_mapping} shows what Compton-scatters angles are accepted (can show up as multiplicity two events) as the non-shaded area and the shaded area denotes which scattering angles are directed away from the array and will not register as a second hit.
+The shaded area in~\ref{fig:compton_angle_mapping} denotes the scattering angles where an incident photon, incident from outside the array, interacts with one detector and scatters in such a way that it will not interact with a second detector based on the geometry of the GRIFFIN detectors. 
+The non-shaded area shows the scattering angles that are accepted, the incident photon will interact with one detector and scatter into another, and could register as a two-photon event.
+
 
 \begin{figure}[htbp]
   \centering
@@ -214,16 +217,16 @@ Since the energy-angle distribution of Compton scattering is well understood, th
   \label{fig:compton_angle_mapping}
 \end{figure}
 
-Given the Compton-scattering angles that GRIFFIN can observe, the Compton-scatter formula gives the energy-angle bands of photon energies that could be Compton-scatters rather than true two-photon events.
+Using the accepted GRIFFIN scattering angles, the Compton-scatter formula (see Section~\ref{sec:compton_scatter}) gives the energy-angle bands of photon energies that could be Compton-scatters rather than true two-photon events.
 The bands are shown in~\ref{fig:simulation_data_comparison_with_compton_bands} as black and red bands on the simulated and collected energy-angle matrices respectively.
-
-
-% explain comparison
+These bands support the observation of two-photon events because as the simulation shows the energy of the two-photon events are peaked around the middle of the energy range and extended minimally into the Compton-scattering bands. 
+This can be used to further refine the selection of two-photon events and a general use algorithm is being developed to remove, or reconstruct, Compton-scatter events when filling a matrix. 
+This algorithm is still in the development stage but should increase the peak-to-background ratio of a two-photon peak in a sum spectrum such as~\ref{fig:sum_spectrum_dec2019}.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.95\textwidth]{simulation_vs_data_anglematrix_with_compton_bands.png}
-  \caption{Comparison of simulated energy-angle matrix with the energy-angle matrix, gated on the two-photon peak, with Compton-scattering bands superimposed on both.
+  \caption{Comparison of simulated energy-angle matrix with the energy-angle matrix, gated on the two-photon peak, with Compton-scattering bands superimposed on both. Inter-clover scattering angles are not shown in the plot because the are ignored in the data analysis.  
     \textit{Left:} Simulated energy-angle matrix with Compton-scattering bands plotted in black. Any events between the bands is a possible Compton-scatter and can be vetoed in future histogram generation.
     \textit{Right:} $^{90}$Sr source energy-angle matrix with Compton-scattering bands plotted in red. Any events between the bands is a possible Compton-scatter and can be vetoed in future histogram generation.
   }
