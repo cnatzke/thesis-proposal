@@ -9,12 +9,23 @@ The following sections detail what is still in development and future analysis p
 %------------------------------------------
 \subsection{$^{90}$Sr Source Data}
 %------------------------------------------
-There
+As mentioned in Section~\ref{sec:simulation} the GEANT4 simulations and the Compton-scattering rejection algorithm are still in development. 
 
-% Compton rejection algoritm
-% simulation campaign
-% energy sharing 
-% angular distribution
+\textbf{Simulations:} A library controlling competitive nuclear two-photon decay has been added to GEANT4 and has been tested using a toy simulation.
+The GRIFFIN GEANT4 simulations have been built against the GEANT4 installation with the two-photon decay physics added in, but the full functionality of the simulations have not been validated yet.
+% add sentence about how simulation will be validated. 
+
+Once the simulations have been validated a simulation campaign will be run modeling the full $^{90}Sr$ source decay chain with two-photon physics enabled to compare to the source data taken in December 2019. 
+The two-photon physics will be tuned to match the parameters given in Kramp \textit{et al.}~\cite{kramp_nuclear_1987} to better understand GRIFFIN's resolving power for nuclear two-photon decay. 
+Furthermore, a basic implementation of the room background will be added to the simulation to better mirror the experimental conditions in the ISAC-I hall. 
+
+\textbf{Compton Rejection Algorithm:} The Compton-scattering algorithm discussed in Section~\ref{sec:compton_scatter} should increase the fidelity with which two-photon events can be selected and sorted into histograms. 
+The algorithm can also be used to reconstruct Compton-scatters between crystals in GRIFFIN and should provide utility to $\beta$-decay experiments performed at GRIFFIN. 
+Full development and release of the algorithm requires GEANT4 simulations to model mono-energetic photons incident from outside the array to validate and troubleshoot the logic of the algorithm.
+This simulation campaign is planned to run after the two-photon decay campaign, and hopefully the results of the two simulations will help further isolate the two-photon decays in the $^{90}$Sr dataset to isolate a peak with sufficent statistics to measure a physics result. 
+
+Once a peak of sufficient statistics is identified, the energy-angle matrices shown in Section~\ref{sec:angular_matrices} will be used to generate an energy sharing distribution and an angular distribution of the two emitted photons.
+The energy sharing distribution can be fit to equation~\ref{eqn:diff_decay_rate_full} to determine the dipole vs quadrupole contributions to the decay mode and the angular distribution can be fit to equation~\ref{eqn:angular-distribution} to find the mixing ratio of electric to magnetic transitions in the decay mode. 
 
 %------------------------------------------
 \subsection{$^{72}$Ga Data}
