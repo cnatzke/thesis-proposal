@@ -103,15 +103,28 @@ and
 where $E_{\gamma_1}$, $E_{\gamma_1}$, and $E_{0}$ are the energy of the two photons and the transition energy; $\alpha_{E1}$, $\alpha_{E2}$, and $\chi$ are the electric transition polarizabilities and susceptibility; and $\cos\theta_{12}$ is the angle between the two photons. 
 
 Equation~\ref{eqn:diff_decay_rate_full} leads to the expected energy sharing distribution for a pure dipole transition of 
+
 \begin{equation}
     \frac{d^2\Gamma_{\gamma\gamma}}{d \cos\theta_{12} dE_{\gamma_1}} =  E_{\gamma_1}^3 E_{\gamma_2}^3 \cdot \frac{\alpha_{E1}}{\pi} \left( 1 + \cos^2\theta_{12} \right)
 \end{equation}
+
 and for a pure quadrupole
+
 \begin{align}
     \frac{d^2\Gamma_{\gamma\gamma}}{d \cos\theta_{12} dE_{\gamma_1}} = E_{\gamma_1}^5 E_{\gamma_2}^5 \cdot \beta \left( 1 - 3 \cos^2\theta_{12} + 4 \cos^4 \theta_{12} \right) 
 \end{align}
+
 where $\beta = \frac{\alpha_{E2}^2}{\pi (12)^2}$.
 
+\ref{fig:two_photon_energy_sharing_kramp} shows the expected energy distribution for a pure dipole and pure quadrupole transition in the non-competitive two-photon emission of $^{16}$O.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{two_photon_energy_sharing_kramp.png}
+    \caption{Energy sharing spectrum for the 6.05 MeV two-photon decay of $^{16}$O. The solid line represents the energy distribution for a pure dipole transition and the dashed line a pure quadrupole transition. Figure from~\cite{kramp_nuclear_1987}.}
+    \label{fig:two_photon_energy_sharing_kramp}
+\end{figure}
+  
 According to Schirmer \textit{et al.} two-photon decay in $^{90}$Zr and $^{40}$Ca occurs not only through two E1 emission but also through equally strong 2M1 emission leading to a linear interference term in the angular correlation function linear with respect to $\cos\theta_{12}$. 
 Kramp \textit{et al.} found the relative branching ratio of 2E2 to 2E1 decays was on the order of $<0.8\%$ with theoretical upper limit of $0.1\%$ meaning the approximmation $\alpha_{E2} = 0$ equation \ref{eqn:diff_decay_rate_full} becomes 
 \begin{equation}
@@ -122,6 +135,14 @@ where the angular dependence is decoupled from the energy dependence. Therefore 
    W(\theta_{12}) \propto \left( 1 + \frac{4 \alpha_{E1} \chi}{\alpha_{E1}^2 + \chi^2} \cos\theta_{12} +  \cos^2\theta_{12} \right)
 \end{equation}
 neglecting the linear polarization term present in Schirmer \textit{et al.} \cite{schirmer_double_1984}.
+An example of this distribution is show in~\ref{fig:two_photon_angular_dist} for $^{40}$Ca and $^{90}$Zr.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{two_photon_angular_dist.png}
+    \caption{Angular distribution of the two-photo decay of $^{40}$Ca and $^{90}$Zr. The dashed lines are the best fit allowing for 2E1 and 2M1 transition and the solid lines represent the calculated correlation if the areas contaminated by Position Annihilation in Flight (PAF) are not excluded. Figure from~\cite{schirmer_double_1984}.}
+    \label{fig:two_photon_angular_dist}
+\end{figure}
 
 %------------------------------------------
 \subsection{Compton-Scattering}
