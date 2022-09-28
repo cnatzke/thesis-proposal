@@ -159,8 +159,38 @@ The energy of the scattered photon, $E^{'}$, can be related to its original ener
 
 where $m_e$ is the mass of the electron and $c$ is the speed of light. 
 
+%------------------------------------------
+\subsection{Bremsstrahlung Radiation}
+\label{sec:bremsstrahlung_radiation}
+%------------------------------------------
+Bremsstrahlung radiation, also called breaking radiation, is the radiation emitted by charged particles when undergoing acceleration. 
+Beta decay electrons interacting with atomic electrons via Coulomb scattering will suffer large deflections and erratic behavior partly due to their relativistic speeds.
+In fact the energy transfer is sufficiently large that the incident and deflected electrons become indistinguishable post collision, and the rapid changes in direction and magnitude of velocity causes the radiation of electromagnetic energy called bremsstrahlung radiation~\cite{krane_introductory_1987}. 
+The energy loss per unit length for the electons can be written as: 
 
+\begin{align}
+    \left(\frac{dE}{dx}\right)_c ={}& \alpha \frac{2 \pi N_0 Z \rho}{m c^2 \beta^2 A} \left[ \ln \frac{T(T + m c^2)^2 \beta^2}{2 I^2 m c^2} + (1 - \beta^2) - (2\sqrt{1 - \beta^2} - 1 + \beta^2) \ln2 + \frac{1}{8}(1 - \sqrt{1 - \beta^2})^2 \right] \\
+    \left(\frac{dE}{dx}\right)_r ={}& \alpha \frac{Z^2 N_0 (T + m c^2) \rho}{137 m^2 c^4 A} \left[4 \ln \frac{2(T + m c^2)}{m c^2} - \frac{4}{3} \right] \\
+    \alpha = {}& \left(\frac{e^2}{4 \pi \epsilon_0}\right)
+\end{align}
 
+where $T$ is the kinetic energy of the electron and the subscripts $c$ and $r$ stand for the energy loss due to collisions and radiation respectively. 
+
+The total energy loss is the sum of the two terms: 
+
+\begin{equation}
+    \frac{dE}{dx} = \left(\frac{dE}{dx}\right)_c + \left(\frac{dE}{dx}\right)_r 
+\end{equation}
+
+where the radiative term is only valid for relativistic energies, below 1 MeV the radiative losses are negligable.
+
+The ratio of the two terms 
+
+\begin{equation}
+    \frac{(dE/dx)_r}{(dE/dx)_c} \approx \frac{T + mc^2}{mc^2} \frac{Z}{1600}
+\end{equation}
+
+shows that the radiative term is only significant at high energies and high Z materials~\cite{krane_introductory_1987}.
 
 %------------------------------------------
 \end{document}
