@@ -3,6 +3,18 @@
 
 \chapter{Conclusion}
 
+Two-photon decay is the only known probe of the \textit{transition} polarizability and susceptibility of nuclear matter, which can be used to constrain the nuclear equation-of-state via the slope parameter in the term governing asymmetric matter. 
+
+In this work, a proof-of-concept observation of the 1760 keV two-photon decay from $^{90}$Zr via a $^{90}$Sr source has been made, and a dataset exists for extending the analysis to a RIB delivered isotope. 
+Using a combination of strict timing gates, event selection, and statistical background selection a sum peak at the full transition energy of 1760 keV has been identified, but lacks the statistics to make a proper measurement of the energy-sharing distribution or the angular correlation between photons.
+Further work is needed to refine the data selection techniques and veto Compton-scatters from the sum peak, but the analysis techniques can be applied to a $^{72}$Ga $\beta$ decay dataset taken in 2017 and 2019 to test the feasibility of a two-photon observation in those datasets. 
+If a two-photon peak is found it would be the first observation of two-photon decay in $^{72}$Ge and the fourth overall. 
+
+In support of the data analysis a GEANT4 physics library has been written and is in the process of validation to model a two-photon decay in GRIFFIN and help develop proper data sorting techniques to isolate the two-photon decays from room background and Compton-scatters. 
+The two-photon decays have been modeled as completely competitive process within GEANT4 and the branching ratio, the multipolarity, and the mixing ratio of emitted photons can all be specified by the user and used to constrain experimentally measured distributions. 
+
+
+
 %------------------------------------------
 \subsection{Work in Progress}
 %------------------------------------------
@@ -16,9 +28,8 @@ As mentioned in Section~\ref{sec:simulation} the GEANT4 simulations and the Comp
 
 \textbf{Simulations:} A library controlling competitive nuclear two-photon decay has been added to GEANT4 and has been tested using a toy simulation.
 The GRIFFIN GEANT4 simulations have been built against the GEANT4 installation with the two-photon decay physics added in, but the full functionality of the simulations have not been validated yet.
-% add sentence about how simulation will be validated. 
 
-Once the simulations have been validated a simulation campaign will be run modeling the full $^{90}Sr$ source decay chain with two-photon physics enabled to compare to the source data taken in December 2019. 
+Once the simulations have been validated a simulation campaign will be run modeling the full $^{90}$Sr source decay chain with two-photon physics enabled to compare to the source data taken in December 2019. 
 The two-photon physics will be tuned to match the parameters given in Kramp \textit{et al.}~\cite{kramp_nuclear_1987} to better understand GRIFFIN's resolving power for nuclear two-photon decay. 
 Furthermore, a basic implementation of the room background will be added to the simulation to better mirror the experimental conditions in the ISAC-I hall. 
 
@@ -29,6 +40,9 @@ This simulation campaign is planned to run after the two-photon decay campaign, 
 
 Once a peak of sufficient statistics is identified, the energy-angle matrices shown in Section~\ref{sec:angular_matrices} will be used to generate an energy sharing distribution and an angular distribution of the two emitted photons.
 The energy sharing distribution can be fit to equation~\ref{eqn:diff_decay_rate_full} to determine the dipole vs quadrupole contributions to the decay mode and the angular distribution can be fit to equation~\ref{eqn:angular-distribution} to find the mixing ratio of electric to magnetic transitions in the decay mode. 
+
+\textbf{Data Resorting:} The $^{90}$Sr source datasets needs to be resorted to improve the spectra of interest and generate proper comparisons between the datasets. 
+This process will use the existing analysis framework and will help eliminate any incosistencies in how the data has been handled thus far in the analysis. 
 
 %------------------------------------------
 \subsubsection{$^{72}$Ga Data}
