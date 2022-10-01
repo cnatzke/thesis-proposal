@@ -5,9 +5,9 @@
 \label{sec:proof_of_concept_90sr}
 
 
-The most critical observation is a sum-peak at the full transition energy of the two-photon decay. 
 Measuring two-photon decay is very challenging due to its small branching ratio and continuum of energy meaning the choice of source is very important.
 As a result we have staged the experiment such that initial testing and proof of concept uses a radioactive source and then the methods developed in testing are applied to radioactive ion beams. 
+The most critical observation is a sum-peak at the full transition energy of the two-photon decay. 
 Since the two photons share energy in a continuum and \textit{sum} to the full transition energy the peak will show up in a sum spectrum (described in Section~\ref{sec:sum_spectrum}) as a peak at the energy of interest.
 
 %------------------------------------------
@@ -35,8 +35,9 @@ The source can be placed in GRIFFIN and data can be collected for as long as the
 The first attempt at measuring two-photon decay with GRIFFIN occurred in November 2017 using a 19 MBq $^{90}$Sr source already present at TRIUMF and was used to evaluate the feasibility of measuring two-photon transitions and assess the background level in the array.
 The $^{90}$Sr source was placed in the center of a DELRIN sphere to reduce the number beta particles reaching the HPGe detectors, and the DELRIN sphere was screwed onto a DELRIN source holder rod locking it into position.
 The source was aligned to the centre of the array using a laser pointer mounted to the upstream beamline.
-All sixteen GRIFFIN clovers were present in the array in high-efficiency mode, the BGO suppression shields had not been installed yet, and the $^{90}$Sr puck source was roughly aligned to the centre of the array using a source holder.
+All sixteen GRIFFIN clovers were present in the array in high-efficiency mode and the $^{90}$Sr puck source was roughly aligned to the centre of the array using a source holder.
 X-ray absorbers, composed of 0.1 mm layer of Tantalum (Ta), 0.25 mm layer of Tin (Sn), and 0.25 mm layer of Copper (Cu), were placed in front of the clover faces with the Cu layer facing the clover to reduce the low energy x-ray flux on the HPGe clovers.
+No BGO suppression shields were present for this data collection. 
 DAQ rates are detailed in \ref{tab:daq_rates}.
 
 \begin{table}[]
@@ -53,7 +54,7 @@ DAQ rates are detailed in \ref{tab:daq_rates}.
 \end{table}
 
 \ref{fig:sum_spectrum_jul2017} shows the sum spectrum generated from this data collection.
-There is a peak near the two-photon transition energy of 1760 keV with a centroid of 1764 keV and this peak perfectly matches the energy of a common room background transition from $^{214}$Bi masking any possible two-photon peak.
+There is a peak near the two-photon transition energy of 1760 keV with a centroid of 1764 keV perfectly matching the energy of a common room background transition from $^{214}$Bi masking any possible two-photon peak.
 Furthermore, the presence of two peaks, at 57 and 65 keV respectively, indicate the presence of tungsten in the ceramic backing of the button source.
 With no way to veto Compton scatters and the large x-ray flux coming from the source no two-photon peak could be observed with this source.
 
@@ -81,6 +82,8 @@ The DELRIN source holder was modified to no longer screw onto the DELRIN support
   \label{fig:source_holder_jul2018}
 \end{figure}
 
+\ref{fig:sum_spectrum_jul2018} is the sum spectrum generated from this dataset. 
+The tungsten x-rays are no longer present and the 1764 keV peak is suppressed. 
 Despite the addition of BGO-suppression shields and the modified source holder the Bremsstrahlung radiation from the interaction of the emitted betas and the source ceramic pellet created too much background and two-photon signals could not be distinguished.
 The clovers directly behind the pellet had a count rate twice that of the others, 8 kHz vs 4 kHz, thus suggesting a new source was required to make an observation.
 
@@ -99,9 +102,9 @@ Prior to this data collection the $^{90}$Sr source had the activity mounted on a
 The high beta activity of the source caused the Tungsten dopant in the ceramic to flouresce x-rays, of characteristic energy 57 and 65 keV, measured primarily in detectors directly behind the ceramic backing of the source.
 Furthermore, the ceramic and the bronze source holder were made of sufficiently high-Z materials such that the Bremsstrahlung radiation from the interaction of the betas released from the source masked any two-photon signal that GRIFFIN could measure.
 
-To remove the Tungsten x-rays and reduce the Bremsstrahlung radiation a new custom source was fabricated where the $^{90}$Sr activity was placed in the centre of a DELRIN (polyoxymethylene) sphere.
+To remove the tungsten x-rays and reduce the Bremsstrahlung radiation a new custom source was fabricated where the $^{90}$Sr activity was placed in the centre of a DELRIN (polyoxymethylene) sphere.
 A commercially obtained 20 MBq liquid Strontium Chloride, dissolved in 0.1M HCL, source was purchased and the source was evaporated into the centre of a DELRIN sphere, which was then sealed.
-Figure~\ref{fig:source_holder} shows the source holder pre-source evaporation.
+\ref{fig:source_holder} shows the source holder pre-source evaporation.
 Since there is no high-Z material in the source holder the Bremsstrahlung radiation is strongly reduced compared to the original source.
 
 % TODO Add picture
@@ -125,9 +128,9 @@ A PEEK (polyetheretherketone) source holder was fabricated to hold the sphere co
 
 \begin{figure}[htbp]
   \centering
-  \subfloat{\includegraphics[height=5cm]{custom_90Sr_source.jpg}}
+  \subfloat{\includegraphics[height=7cm]{custom_90Sr_source.jpg}}
   \quad
-  \subfloat{\includegraphics[height=5cm]{beamline_xray_absorbers.png}}
+  \subfloat{\includegraphics[height=7cm]{beamline_xray_absorbers.png}}
   \caption{
     \textit{Left:} Photograph of $^{90}$Sr source and source holder aligned to the centre of GRIFFIN. Ta/Sn/Cu X-ray absorbers were placed in the opening faces of the GRIFFIN rhombicuboctahedron to help reduce room background and increase passive shielding.
     \textit{Right:} Photograph of $^{90}$Sr holder looking upstream. The red arrow points to the laser pointer used to align the source sphere.
@@ -162,7 +165,7 @@ The new source reduced the Bremsstrahlung radiation present in the previous data
 \subsection{Further Analysis}
 \label{sec:further_analysis}
 %------------------------------------------
-Since evidence of a two-photon transition can be seen in \ref{fig:sum_spectrum_dec2019}, the following sections detail further analyses done on the December 2019 data.
+Since evidence of a two-photon transition can be seen in \ref{fig:sum_spectrum_dec2019}, the following sections detail further analyses performed on the December 2019 data.
 
 %------------------------------------------
 \subsubsection{Angular Matrices}
@@ -172,7 +175,7 @@ Since evidence of a two-photon transition can be seen in \ref{fig:sum_spectrum_d
 The angular correlation between the two photons composing nuclear two-photon decay is a powerful tool for assigning the transition polarizability and susceptibility of the excited state, as described by equation~\ref{eqn:angular-distribution}.
 This angular correlation is distinct to two-photon decay and can be used as a condition to isolate two-photon decays from other multiplicity two events; such as internal and external Compton-scattering.
 Both internal and external Compton-scattering are a single photon that doesn't deposit its full energy in a single crystal but rather scatters into another crystal and deposits the remaining energy, making it a multiplicity two event and a peak in the sum spectrum.
-The difference between internal and external is the source of the photon: internal originates from the centre of the array, for example a $^{207}$Bi source, and external originates from outside the array, most commonly room background $\gamma$-rays as discussed in Section~\ref{sec:room_background}.
+The difference between internal and external is the source of the photon: internal originates from the centre of the array, for example a $^{207}$Bi source; and external originates from outside the array, most commonly room background $\gamma$-rays as discussed in Section~\ref{sec:room_background}.
 Each of the three different cases, two-photon decay, internal and external Compton-scatters, all have a distinct angular correlation matrix.
 \ref{fig:external_compton_scatter_schematic}, \ref{fig:internal_compton_scatter_schematic}, and \ref{fig:two_photon_angular_schematic} show the difference between the three angular matrices
 
@@ -221,14 +224,14 @@ To better understand the data analysis procedure and hope to properly isolate tw
 The simulations are being performed using GEANT4~\cite{allison_recent_2016} and a custom physics package to simulate competitive two-photon decay.
 Natively GEANT4 does not have a physics library to simulate nuclear two-photon decay, so a custom physics library is in the process of being written; this, alongside a pre-existing GRIFFIN simulation package~\cite{v_bildstein_griffincollaborationdetectorsimulations_v10_2017} will allow a complete simulation campaign to be performed to better understand how two-photon events interact with GRIFFIN.
 
-In its present state the GEANT4 physics library allows for fully competitive two-photon decay with user-tunable parameters to customize the decay for a variety of uses.
+In its present state the two-photon physics library allows for fully competitive two-photon decay with user-tunable parameters to customize the decay for a variety of experimental cases.
 The branching ratio of two-photon decay, the ratio of two-photon events to first order decays such as internal conversion or single gamma decay; the multipolarity of the decay, the ratio of dipole transitions to quadrupole transitions; and the mixing ratio of electric to magnetic dipoles are all tunable parameters that can be used to constrain experimental measurements and assist in the assignment of those values.
 The simulation has been used to generate an angular matrix similar to \ref{fig:two_photon_angular_schematic} except only two-photon transitions were enabled, no other decay modes were allowed, shown in~\ref{fig:simulated_twophoton_angular_matrix}.
 The two-photon physics have not been validated with the GRIFFIN simulation at this time, but they still provide a tool with which to help identify two-photon events present in the most recent dataset.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.95\textwidth]{simulated_2photon_angular_matrix.png}
+  \includegraphics[width=0.95\textwidth]{simulated_twophoton_angular_matrix.png}
   \caption{Simulated two-photon angular matrix using the custom GEANT4 physics library where angle is the angle between the photons and energy is the energy of a single photon. This is not a matrix created from simulated GRIFFIN hits but the emitted distribution from a $^{90}$Y source.}
   \label{fig:simulated_twophoton_angular_matrix}
 \end{figure}

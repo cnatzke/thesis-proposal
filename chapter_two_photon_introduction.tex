@@ -7,31 +7,30 @@
 %------------------------------------------
 \subsection{Nuclear Equation of State}
 %------------------------------------------
-The Nuclear Equation of State (EOS) governs the properties of nuclear matter and defines the properties of neutron-rich nuclei, the structure of neutron stars, supernova explosions and compact object mergers \cite{knupfer_scaling_1985}. 
+The Nuclear Equation of State (EOS) governs the properties of nuclear matter and defines the characteristics of neutron-rich nuclei, the structure of neutron stars, supernova explosions and compact object mergers \cite{knupfer_scaling_1985}. 
 The EOS is well constrained for symmetric nuclear matter, matter where the number of protons and neutrons are roughly equal, but the properties for asymmetric, neutron rich matter require further investigation \cite{danielewicz_determination_2002}.
-The largest uncertainties in the EOS for neutron rich matter lie in the limited knowledge of the symmetry energy $J$, the difference between the energies of neutron and nuclear matter at saturation density, and the slope of the symmetry energy $L$, which relates the pressure of neutron matter. 
+The largest uncertainties in the EOS for neutron rich matter lie in the limited knowledge of the symmetry energy $J$, the difference between the energies of neutron and nuclear matter at saturation density, and the slope of the symmetry energy $L$, which governs the pressure of neutron matter. 
 
-
-Atomic nuclei provide a terrestrial probe of the symmetry energy $J$, where it contributes to the formation of neutron skins in systems with a neutron excess. 
-$J$ and $L$ can be correlated with isovector collective excitations of nucleus, such as the pygmy dipole resonance \cite{carbone_constraints_2010} and giant dipole resonances (GDRs) \cite{trippa_giant_2008}, via calulations based on energy density functionals (EDfs) suggesting the neutron skin thickness, the difference between the point-neutron and point-proton radii $R_{skin} = R_n - R_p$ \cite{tsang_constraints_2012}, could be constrained by measuring isovector collective observables at low energy \cite{krasznahorkay_excitation_1999}.
-A direct experimental measurement of $R_{skin}$ is extremely challenging and can be extracted by its correlation to collective isovector observables at low energies \cite{birkhan_electric_2017}. 
-One such observable is the dipole polarizability $\alpha_D$ \cite{birkhan_electric_2017}, representing an experimentally viable tool to constrain the EOS of neutron matter and the physics of neutron stars. 
+Atomic nuclei provide a terrestrial probe of nuclear matter and the symmetry energy $J$, where it contributes to the formation of neutron skins in systems with a neutron excess. 
+$J$ and $L$ can be correlated with isovector collective excitations of nucleus, such as the pygmy dipole resonance \cite{carbone_constraints_2010} and giant dipole resonances (GDRs) \cite{trippa_giant_2008}, via calulations based on energy density functionals (EDfs) suggesting the neutron skin thickness, the difference between the point-neutron and point-proton radii~\cite{tsang_constraints_2012}, could be constrained by measuring isovector collective observables at low energy \cite{krasznahorkay_excitation_1999}.
+A direct experimental measurement of $R_{skin}$ is extremely challenging but can be indirectly extracted by its correlation to collective isovector observables at low energies \cite{birkhan_electric_2017}. 
+One such observable is the dipole polarizability $\alpha_D$ \cite{birkhan_electric_2017}, providing an experimentally viable tool to constrain the EOS of neutron matter and the physics of neutron stars. 
 % TODO : Add citations to last sentence. 6-11 from birkham
 
 %------------------------------------------
 \subsection{Electric Polarizability and Magnetic Susceptibility}
 %------------------------------------------
 The concept of polarizability, a fundamental concept in physics the describes how applied electric or magnetic fields induce an electric or magnetic multipole moment in the matter of interest \cite{jackson_classical_1999}, plays a large role in nuclear physics observables across a broad range of interests.
-Of specific interest to the EOS is the electric and magnetic dipole polarizability of the nucleus because nuclear DFT calculations suggest a strong correlation between $\alpha_D$ and the neutron radius \cite{hagen_neutron_2016}, $R_{n}$. 
+Of specific interest to the EOS is the electric and magnetic dipole polarizability of the nucleus because nuclear DFT calculations suggest a strong correlation between $\alpha_D$ and the neutron radius, $R_{n}$~\cite{hagen_neutron_2016}. 
 The static dipole polarization of the ground and excited state shape of atomic nuclei is influenced by the state's coupling to higher-energy collective modes, like the giant dipole resonance and pygmy dipole resonance, via virtual excitations. 
-As described in \cite{soderstrom_electromagnetic_2020}, the static dipole polarizability, $\alpha_D$ can be obtained from the photonuclear population of excited states, given by
+As described in S\"oderstr\"om \textit{et al.}~\cite{soderstrom_electromagnetic_2020}, the static dipole polarizability, $\alpha_D$ can be obtained from the photonuclear population of excited states, given by
 
 \begin{equation} \label{eqn:scalar_dipole_polarizability}
     \alpha_{D,E1} = 2 e \sum_n \frac{|\langle I_0 || E1 || I_n \rangle |^2}{E_n - E_0}
 \end{equation}
 
 where $I_0$, $E1$, and $I_n$ are the matrix elements for the ground state, electric dipole transition, and excited state respectively; $e$ is the elementary charge of the electron; and $E_n$ is the energy of the state. 
-The value of $alpha_D$, and the analogous magnetic susceptibility $\chi$, in atomic and nuclear systems spans many orders of magnitude depending on the scale of interest, for example the magnetic susceptibility of a nucleus is twelve orders of magnitude smaller than that of an atom \cite{knupfer_scaling_1985}.
+The value of $\alpha_D$, and the analogous magnetic susceptibility $\chi$, in atomic and nuclear systems spans many orders of magnitude depending on the scale of interest, for example the magnetic susceptibility of a nucleus is twelve orders of magnitude smaller than that of an atom \cite{knupfer_scaling_1985}.
 
 Following the explanation in \cite{soderstrom_electromagnetic_2020} the polarizability can be expanded past the scalar case to include separate tensor components describing higher-order electric and magnetic multipoles. 
 Using the nuclear structure framework these off diagonal polarizabilities appear as very weak second-order electromagnetic processes that can be expressed analogously to Eq. (\ref{eqn:scalar_dipole_polarizability}) in terms of either electric and magnetic components or different multipolarities. 
@@ -69,7 +68,6 @@ Internal Conversion is particularly important for transitions where both the ini
 
 The only known experimental probe for the transition electric dipole polarizabilty, $\alpha_D^{fi}$ is nuclear two-photon decay.
 Nuclear two-photon decay is a second-order QED process wherein the nucleus simultaneously emits two photons of continuous energy that sum to the initial excitation energy, and the two photons couple to preserve the change in angular momentum of the transition \cite{kramp_nuclear_1987}.
-Figure~\ref{fig:two_photon_schematic} graphically demonstrates a non-competitive two-photon transition.
 
 \begin{figure}[H]
     \centering
@@ -80,6 +78,7 @@ Figure~\ref{fig:two_photon_schematic} graphically demonstrates a non-competitive
 
 Nuclear two-photon decay is a fully competitive process, albeit second-order, and can occur between any two states in the nucleus. 
 This makes it difficult to observe between levels  for transitions where single gamma decay is allowed. Recently competitive two-photon decay has been measured in $^{137m}$Ba \cite{soderstrom_electromagnetic_2020} but is more easily observed in nuclei that have $0^+$ ground and first excited states since the only allowed decay modes for E0 transitions are internal conversion and two-photon decay. 
+\ref{fig:two_photon_schematic} graphically demonstrates a non-competitive two-photon transition.
 This so-called noncompetitive two-photon decay has been observed in the doubly magic nuclei $^{16}$O, $^{40}$Ca \cite{schirmer_double_1984}, and $^{90}$Zr~\cite{schirmer_double_1984}. 
 
 %Nuclear two-photon decay has been observed in several nuclear where the first excited state and ground state have a $J^{\pi} = 0^+$ making single gamma decay is forbidden. 
@@ -126,11 +125,13 @@ where $\beta = \frac{\alpha_{E2}^2}{\pi (12)^2}$.
 \end{figure}
   
 According to Schirmer \textit{et al.} two-photon decay in $^{90}$Zr and $^{40}$Ca occurs not only through two E1 emission but also through equally strong 2M1 emission leading to a linear interference term in the angular correlation function linear with respect to $\cos\theta_{12}$. 
-Kramp \textit{et al.} found the relative branching ratio of 2E2 to 2E1 decays was on the order of $<0.8\%$ with theoretical upper limit of $0.1\%$ meaning the approximmation $\alpha_{E2} = 0$ equation \ref{eqn:diff_decay_rate_full} becomes 
+Kramp \textit{et al.} found the relative branching ratio of 2E2 to 2E1 decays was on the order of $<0.8\%$ with theoretical upper limit of $0.1\%$, motivating the approximation $\alpha_{E2} = 0$.
+Equation \ref{eqn:diff_decay_rate_full} becomes 
 \begin{equation}
     \frac{d^2\Gamma_{\gamma\gamma}}{d \cos\theta_{12} dE_{\gamma_1}} \propto E_{\gamma_1}^3 E_{\gamma_2}^3 \left( 1 + \frac{4 \alpha_{E1} \chi}{\alpha_{E1}^2 + \chi^2} \cos\theta_{12} +  \cos^2\theta_{12} \right)
 \end{equation}
-where the angular dependence is decoupled from the energy dependence. Therefore the expected angular correlation is proportional to
+where the angular dependence is decoupled from the energy dependence. 
+The expected angular correlation is proportional to
 \begin{equation} \label{eqn:angular-distribution}
    W(\theta_{12}) \propto \left( 1 + \frac{4 \alpha_{E1} \chi}{\alpha_{E1}^2 + \chi^2} \cos\theta_{12} +  \cos^2\theta_{12} \right)
 \end{equation}
@@ -165,7 +166,8 @@ where $m_e$ is the mass of the electron and $c$ is the speed of light.
 %------------------------------------------
 Bremsstrahlung radiation, also called breaking radiation, is the radiation emitted by charged particles when undergoing acceleration. 
 Beta decay electrons interacting with atomic electrons via Coulomb scattering will suffer large deflections and erratic behavior partly due to their relativistic speeds.
-In fact the energy transfer is sufficiently large that the incident and deflected electrons become indistinguishable post collision, and the rapid changes in direction and magnitude of velocity causes the radiation of electromagnetic energy called bremsstrahlung radiation~\cite{krane_introductory_1987}. 
+In fact the energy transfer is sufficiently large that the incident and deflected electrons become indistinguishable post collision, and the rapid changes in direction and magnitude of velocity necessitates the radiation of electromagnetic energy~\cite{krane_introductory_1987}.
+The emitted radiation is called bremsstrahlung radiation. 
 The energy loss per unit length for the electons can be written as: 
 
 \begin{align}

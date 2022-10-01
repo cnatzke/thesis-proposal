@@ -15,7 +15,7 @@
 \end{figure}
 
 The proposed experiment will be performed at Canada's national laboratory for nuclear and particle physics, TRIUMF. 
-TRIUMF is located in Vancouver, British Columbia, Canada and was established in 1968 by three universities, Simon Fraser University, the University of British Columbia (UBC), and the University of Victoria, as an experimental facility to meet needs the three universities could not individually provide. 
+TRIUMF is located in Vancouver, British Columbia, Canada and was established in 1968 by three universities, Simon Fraser University, the University of British Columbia (UBC), and the University of Victoria as an experimental facility to meet needs the three universities could not individually provide. 
 Since then the science program has grown to include nuclear physics, particle physics, molecular and material science, and nuclear medicine while providing research infrastructure and tools too large or complex for a single university to build, operate, or maintain. 
 TRIUMF houses the world's largest cyclotron \cite{dilling_isac_2014} capable of accelerating protons up to 520 MeV before they are delivered to the experimental halls, via one of four beam lines, for direct use or to create secondary radioactive isotope beams of pions, muons, or radioactive isotopes. 
 This work uses the GRIFFIN spectrometer housed in the ISAC-I experimental hall located on the TRIUMF-ISAC-I experimental hall. 
@@ -23,7 +23,7 @@ This work uses the GRIFFIN spectrometer housed in the ISAC-I experimental hall l
 \begin{center}
 \begin{figure}[H]
   \begin{center}
-    \includegraphics[scale=.18]{isac_schematic.png}
+    \includegraphics[height=5in]{isac_schematic.png}
   \end{center}
   \caption{Schematic view of the TRIUMF-ISAC facility \cite{dilling_isac_2014}, including the target ion-source, the high resolution mass separator, and various detection stations.}
   \label{fig:ISAC_HALL}
@@ -40,7 +40,7 @@ Each clover contains four n-type HPGe crystals of 60 mm diameter before shaping 
 The four crystals operating voltage is between 3.5 to 4 kV at 95 K and share the same cryostat cooled by a dewar of liquid nitrogen that is filled every 8 hours. 
 The clover detectors, and any ancillary detector, are placed in an aluminum rhombicuboctahedron support structure where up to sixteen of the eighteen faces of the rhombicuboctahedron are covered by the HPGe clovers.
 The remaining two faces are used for the incoming low-energy RIB from ISAC-I and the tape collection system that removes long-lived activity from the implantation chamber at the end of a measurement cycle \cite{garnsworthy_griffin_2019}. 
-The western hemisphere of GRIFFIN is shown in Figure \ref{fig:griffin_westhemi} where the upstream beam line can be seen on the rightmost edge of the image. 
+The western hemisphere of GRIFFIN is shown in \ref{fig:griffin_westhemi} where the upstream beam line can be seen on the rightmost edge of the image. 
 
 \begin{center}
   \begin{figure}[H]
@@ -65,12 +65,12 @@ The western hemisphere of GRIFFIN is shown in Figure \ref{fig:griffin_westhemi} 
 Each GRIFFIN clover is surrounded by a set of high-efficiency bismuth germanate (BGO) active Compton suppression shields.
 The BGO shields are made of a high-density, large atomic number ($Z$ = 83 for Bi) scintillator coupled to a photomultiplier tube (PMT) to create a detector ideally suited to measure escaping $\gamma$-rays due to its high $\gamma$-ray interaction cross-section. 
 The Compton shields detect Compton-scattered $\gamma$-rays that have scattered out of a HPGe crystal, 511 keV $\gamma$-rays created via pair production, and provide passive shielding from background radiation originating outside the array. 
-Singles from the suppression shields are used as a veto to reject incomplete scatter events in the HPGe crystals thereby increasing the sensitivity and signal-to-noise ratio of the array. 
+Detected events in the suppression shields are used as a veto to reject incomplete scatter events in the HPGe crystals thereby increasing the sensitivity and signal-to-noise ratio of the array. 
 The shields are composed of three individual components; a front plate, a side shield, and a back catcher, all of which can be moved independently providing freedom in the physical arrangement of the detector array. 
 
 The GRIFFIN spectrometer has two distinct operating configurations based on the relative position of the BGO suppression shields and HPGe clover faces to the centre of the array. 
-The first mode named "high-efficiency mode" is when the clovers are 110 mm radially distant from the centre of the array and the front BGO shields are pulled back, shown in the top panel of Figure~\ref{fig:griffin_modes}, to facilitate a large solid angle coverage and greater absolute detection efficiency. 
-The second mode, called "optimized peak-to-total" mode shown in the bottom panel of Figure~\ref{fig:griffin_modes}, is when the HPGe clovers are 145 mm from the centre of the array and the front shield plates of the BGO suppressors are rolled forward to form a complete suppression shield around each HPGe clover. 
+The first mode named "high-efficiency mode" is when the clovers are 110 mm radially distant from the centre of the array and the front BGO shields are pulled back, shown in the top panel of ~\ref{fig:griffin_modes}, to facilitate a large solid angle coverage and greater absolute detection efficiency. 
+The second mode, called "optimized peak-to-total" mode shown in the bottom panel of ~\ref{fig:griffin_modes}, is when the HPGe clovers are 145 mm from the centre of the array and the front shield plates of the BGO suppressors are rolled forward to form a complete suppression shield around each HPGe clover. 
 
 \begin{center}
   \begin{figure}[H]
@@ -111,7 +111,7 @@ The analysis trees can then be sorted into histograms via GRSISort or a custom s
 \subsection{Standard GRIFFIN Calibrations and Data Conditioning}
 %------------------------------------------
 Before any investigation into two-photon decay detection can be performed the data has to be prepared and conditioned in a such a way as to maximize GRIFFIN's potential of measuring a two-photon transition. 
-The techniques are processes discussed hereafter have been applied across as large range of GRIFFIN datasets and therefore are well understood. 
+The techniques are processes discussed hereafter have been applied across as large range of GRIFFIN datasets and are therefore well understood. 
 References~\cite{smith_gamma-gamma_2019}, \cite{garcia_absence_2020}, \cite{maclean_spectroscopy_2021}, and \cite{porzio_configuration_2021} all contain a more in-depth discussion of the common GRIFFIN data conditioning techniques.
 
 %------------------------------------------
@@ -127,7 +127,7 @@ The standard calibration technique uses transitions from well-studied calibratio
   E = a_0 + a_1 P + a_2 P^2
 \end{equation}
 
-where $a_i$ are the fitted coefficients, $P$ is the ADC pulse height, and $E$ is the energy of the $gamma$-ray. 
+where $a_i$ are the fitted coefficients, $P$ is the ADC pulse height, and $E$ is the energy of the $\gamma$-ray. 
 This quadratic calibration is applied on a crystal-by-crystal basis for all HPGe crystal present in the array. 
 The effect of this calibration is shown in~\ref{fig:calibration_effect}. 
 
@@ -141,7 +141,7 @@ The effect of this calibration is shown in~\ref{fig:calibration_effect}.
   \label{fig:calibration_effect}
 \end{figure}
 
-The $^{90}$Sr source data described in Section~\ref{sed:proof_of_concept_90sr} uses this same calibration technique applied on a run-by-run basis to optimize the energy resolution across the entire data-collection.
+The $^{90}$Sr source data described in Section~\ref{sec:proof_of_concept_90sr} uses this same calibration technique applied on a run-by-run basis to optimize the energy resolution across the entire data-collection.
 
 %------------------------------------------
 \subsubsection{Angular Correlations}
@@ -185,7 +185,7 @@ The techniques used in analyzing $\gamma-\gamma$ angular correlations with GRIFF
 \subsubsection{Compton Suppression}
 %------------------------------------------
 In 2019 GRIFFIN received a full set of BGO Compton suppression shields increasing the peak-to-total ratio of collected data via Compton suppression.
-In this works a suppression window, the maximum time difference between a HPGe and BGO hit, of 300 ns was used for the first two tests and 30ns was used for the third test. \ref{fig:bgo_gamma_timing} shows a 300 ns time window superimposed over a time-difference spectrum between a GRIFFIN HPGe crystal and a BGO shield. 
+In this work a suppression window, the maximum time difference between a HPGe and BGO hit, of 300 ns was used for the first two tests and 30ns was used for the third test. \ref{fig:bgo_gamma_timing} shows a 300 ns time window superimposed over a time-difference spectrum between a GRIFFIN HPGe crystal and a BGO shield. 
 In all data collections any BGO shield surrounding the clover has been used as a veto to suppress signals from and of the four HPGe crystals that compose the clover. 
 The spectrum shown in~\ref{fig:suppression_comparison_eu152} shows the effect of BGO-suppression on $^{152}$Eu source data along with the reject hits.
 
@@ -211,6 +211,7 @@ The measurement of nuclear two-photon decay requires the registration of very ra
 One such background, spurious signals that can mimic the signals of interest, is natural $\gamma$-rays emitted primarily by the decay of three radiative isotopes: potassium-40 ($^{40}$K), uranium-238 ($^{238}$U), and thorium-208 ($^{208}$Th)~\cite[]{aksoy_elemental_1994}.
 $^{40}$K decays directly to the stable argon-40 ($^{40}$Ar) emitting a 1460 keV gamma ray, and both $^{238}$U and $^{208}$Th decay through long decay chains eventually terminating in stable lead isotopes. 
 Of all the $\gamma$-rays emitted in those long decay chains the most prominent are the 1765 keV and 2615 keV $\gamma$-rays emitted by bismuth-214 ($^{214}$Bi) and thalium-208 ($^{208}$Tl) respectively.
+\ref{fig:background_spectrum} shows a room background $\gamma$-ray energy spectrum taken with GRIFFIN.
 
 \begin{figure}[htbp]
   \centering
@@ -225,7 +226,7 @@ Of all the $\gamma$-rays emitted in those long decay chains the most prominent a
 %------------------------------------------
 
 The two photons released during a two-photon decay event sum to the total energy of the transition, meaning the full energy of the transition should show up as a peak in a sum spectrum. 
-A sum spectrum is generated by summing the energies of two incident photons together and recording their resultant sum in a histogram.
+A sum spectrum is generated by adding the energies of two incident photons together and recording their resultant sum in a histogram.
 This is similar to the GRIFFIN addback algorithm, where the energy of all events detected within a single clover are summed together, but does not restrict the sum to singles events within the same clover; but rather, sums events together that were registered in different crystals regardless of if they were in the same clover of not. 
 \ref{fig:singles_vs_sum_spectrum} shows the difference between a singles $\gamma$-ray energy spectrum and a sum spectrum.
 
