@@ -2,20 +2,18 @@
 \begin{document}
 
 
-
-Measuring two-photon decay is very challenging due to its small branching ratio and continuum of energy meaning the choice of source is very important.
-As a result we have staged the experiment such that initial testing and proof of concept uses a radioactive source and then the methods developed in testing are applied to radioactive ion beams. 
+Measuring two-photon decay poses a number of challenges, including its small branching ratio and continuum of single photon energies.
+As a result we have staged the proposed work such that initial testing and proof of concept uses a radioactive source and then the methods developed in testing are applied to radioactive ion beams. 
 The most critical observation is a sum-peak at the full transition energy of the two-photon decay. 
 Since the two photons share energy in a continuum and \textit{sum} to the full transition energy the peak will show up in a sum spectrum (described in Section~\ref{sec:sum_spectrum}) as a peak at the energy of interest.
 
 %------------------------------------------
 \subsection{$^{90}$Sr Source}
 %------------------------------------------
-Historically two-photon decay has been measured using a dedicated decay station and radioactive ion beam (RIB)~\cite{kramp_nuclear_1987}.
-The first excited and ground state in $^{90}$Zr are $0^+$ states, with a two-photon transition already observed~\cite{schirmer_double_1984}, and the first excited state is accessible by a $^{90}$Sr source.
-$^{90}$Sr sources are typically used as beta particle detector calibration sources since it primarily decays to the ground state of $^{90}$Y then to the ground state of $^{90}$Zr, but there is a 0.012 percent branching ratio from $^{90}$Y to the first excited stat of $^{90}$Zr at 1760 keV.
-The first excited state and the ground state in $^{90}$Zr are $0^+$ meaning single gamma decay is forbidden, making it an ideal candidate for a non-competitive two-photon measurement.
-Figure~\ref{fig:decay_scheme_with_twophoton} shows the full decay scheme for a $^{90}$Sr source.
+Historically two-photon decay has been measured using a dedicated experimental setup and radioactive ion beam (RIB)~\cite{kramp_nuclear_1987}.
+The first excited and ground state in $^{90}$Zr are $0^+$ states, with a two-photon transition already observed~\cite{schirmer_double_1984}, and the first excited state is accessible by a $^{90}$Sr source (\ref{fig:decay_scheme_with_twophoton}).
+$^{90}$Sr sources are typically used as beta particle detector calibration sources since it primarily decays to the ground state of $^{90}$Y then to the ground state of $^{90}$Zr, but there is a 0.012\% decay branch from $^{90}$Y to the first excited state of $^{90}$Zr at 1760 keV.
+The first excited state and the ground state in $^{90}$Zr are $0^+$ meaning single gamma decay is forbidden and IC decay is the primary channel by which the nucleus deexcites, making it an ideal candidate for a non-competitive two-photon measurement.
 
 \begin{figure}[H]
   \centering
@@ -23,9 +21,6 @@ Figure~\ref{fig:decay_scheme_with_twophoton} shows the full decay scheme for a $
   \caption{Decay scheme of a $^{90}$Sr source with the insert schematically detailing non-competitive two-photon decay. All energies are in keV.}
   \label{fig:decay_scheme_with_twophoton}
 \end{figure}
-
-Since the 1760 keV $E0$ transition of interest in $^{90}$Zr can be accessed without need of a RIB collection time is no longer an issue.
-The source can be placed in GRIFFIN and data can be collected for as long as the array is available. 
 
 %------------------------------------------
 \subsection{Sum Spectrum}
@@ -48,12 +43,20 @@ This is similar to the GRIFFIN addback algorithm, where the energy of all events
 \subsection{First Test - November 2017}
 %------------------------------------------
 The first attempt at measuring two-photon decay with GRIFFIN occurred in November 2017 using a 19 MBq $^{90}$Sr source already present at TRIUMF and was used to evaluate the feasibility of measuring two-photon transitions and assess the background level in the array.
-The $^{90}$Sr source was placed in the center of a DELRIN sphere to reduce the number beta particles reaching the HPGe detectors, and the DELRIN sphere was screwed onto a DELRIN source holder rod locking it into position.
+The $^{90}$Sr source was placed in the center of a DELRIN sphere to suppress the Bremsstrahlung radiation from the emitted beta particles, and the DELRIN sphere was screwed onto a PEEK source holder rod locking it into position (\ref{fig:source_support_picture}).
 The source was aligned to the centre of the array using a laser pointer mounted to the upstream beamline.
 All sixteen GRIFFIN clovers were present in the array in high-efficiency mode and the $^{90}$Sr puck source was roughly aligned to the centre of the array using a source holder.
 X-ray absorbers, composed of 0.1 mm layer of Tantalum (Ta), 0.25 mm layer of Tin (Sn), and 0.25 mm layer of Copper (Cu), were placed in front of the clover faces with the Cu layer facing the clover to reduce the low energy x-ray flux on the HPGe clovers.
 No BGO suppression shields were present for this data collection. 
 DAQ rates are detailed in \ref{tab:daq_rates}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{source_support_picture.png}
+  \caption{$^{90}$Sr source centred in GRIFFIN. The source is surrounded by a DELRIN sphere and the sphere is held into place with a PEEK support rod. The X-ray absorbers in the downstream opening to the right of the source holder were placed on the front face of the HPGe detectors during this test.}
+  \label{fig:source_support_picture}
+\end{figure}
+
 
 \begin{table}[]
   \centering
@@ -69,8 +72,9 @@ DAQ rates are detailed in \ref{tab:daq_rates}.
 \end{table}
 
 \ref{fig:sum_spectrum_jul2017} shows the sum spectrum generated from this data collection.
-There is a peak near the two-photon transition energy of 1760 keV with a centroid of 1764 keV perfectly matching the energy of a common room background transition from $^{214}$Bi masking any possible two-photon peak.
+There is a peak in the two-photon region of interest with a centroid of 1764 keV from $^{214}$Bi decay masking any possible two-photon peak.
 Furthermore, the presence of two peaks, at 57 and 65 keV respectively, indicate the presence of tungsten in the ceramic backing of the button source.
+This flouresce causes the detectors directly behind the source (where the x-ray radiation shine is the strongest) to have a higher count rate than the detectors on the opposite side of the array and random summing with these x-rays causes a significant background in the sum spectrum that must be reduced to observe a two-photon peak. 
 With no way to veto Compton scatters and the large x-ray flux coming from the source no two-photon peak could be observed with this source.
 
 \begin{figure}[htbp]
@@ -86,7 +90,7 @@ With no way to veto Compton scatters and the large x-ray flux coming from the so
 %------------------------------------------
 \subsection{Second Test - July 2018}
 %------------------------------------------
-Between the November 2017 and this data collection in July 2018 a full complement of BGO Compton suppression shields were installed on GRIFFIN providing an increase in the signal-to-noise ratio of the array and providing an opportunity to observe a two-photon transition.
+Between the November 2017 and this data collection in July 2018 a full complement of BGO Compton suppression shields were installed on GRIFFIN providing an increase in the signal-to-noise ratio of the array.
 The DELRIN source holder was modified to no longer screw onto the DELRIN support structure, instead the sphere now sat on a bronze hoop allowing the radiation shine from the ceramic backing of the $^{90}$Sr source to be directed upstream and therefore improve the spectral quality for the other 12 clovers.
 \ref{fig:source_holder_jul2018} shows the modified source holder.
 
@@ -100,7 +104,7 @@ The DELRIN source holder was modified to no longer screw onto the DELRIN support
 \ref{fig:sum_spectrum_jul2018} is the sum spectrum generated from this dataset. 
 The tungsten x-rays are no longer present and the 1764 keV peak is suppressed. 
 Despite the addition of BGO-suppression shields and the modified source holder the Bremsstrahlung radiation from the interaction of the emitted betas and the source ceramic pellet created too much background and two-photon signals could not be distinguished.
-The clovers directly behind the pellet had a count rate twice that of the others, 8 kHz vs 4 kHz, thus suggesting a new source was required to make an observation.
+The clovers directly behind the pellet had a count rate twice that of the others, 8 kHz vs 4 kHz (See Table~\ref{tab:daq_rates}), thus suggesting a new source was required to make an observation.
 
 \begin{figure}[htbp]
   \centering
