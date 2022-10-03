@@ -54,7 +54,7 @@ shows that the radiative term is only significant at high energies and high Z ma
 Following a $\beta$ decay the daughter nucleus will often be left in an excited state and can emit $\gamma$-rays to deexcite. The primary $\gamma$-ray interactions with matter, specifically the detectors, occur via the photoelectric effect, Compton-scattering, and pair production. The probability for interaction via each of these processes depends on the energy of the $\gamma$-ray and the density, atomic number, and the electron binding energy of the electrons of the impacted material.
 
 %------------------------------------------
-\subsection{Photoelectric Absorption}
+\subsubsection{Photoelectric Absorption}
 %------------------------------------------
 Photoelectric absorption is the interaction between a $\gamma$-ray and the physical medium where the $\gamma$-ray is absorbed and the medium ejects and electron from a bound orbital. The energy of ejected photoelectron is given by~\cite{krane_introductory_1987}: 
 
@@ -67,13 +67,22 @@ where $E_\gamma$ is the energy of the incident $\gamma$-ray and $E_b$ is the bin
 Photoelectric absorption dominates low-energy $\gamma$-ray interactions, tens to hundreds of keV depending on the material, and is highly dependent on the atomic number of the absorbing material. Since the absorption depends on the structure of the atomic electrons no simple analytic expression exists to describe its cross-section. A rough approximation is given by~\cite{krane_introductory_1987}: 
 
 \begin{equation}
-    \tau \approxeq K \times \frac{Z^4}{E^{3}_\gamma}
+    \tau \propto K \times \frac{Z^4}{E^{3}}
 \end{equation}
 
 where $\tau$ is the probability for photoelectric absorption, $K$ is a constant, $Z$ is the atomic number of the absorbing material, and $E_\gamma$ is the energy of the incident $\gamma$-ray. Because of the strong dependence on $Z$ $\gamma$-ray shield materials are generally constructed from high-density, high-$Z$ materials such as lead or bismuth-germanate (BGO) to increase the photoelectric absorption cross-section.
 
+The total absorption cross section is dominated by photoelectric absorption at low energies, shown in~\ref{fig:total_crosssection}, with discontinuities appearing as sharp increases corresponding to the binding energies of electrons in the atomic shells. Once the $\gamma$-ray energy is higher than the electron binding energy it can eject electrons from the atomic shell increasing the overall cross section. This discontinuity can be observed for each electron shell in the atom.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{total_gamma_crosssection.png}
+    \caption{The linear attenuation coefficent as a function of $\gamma$-ray energy with individual components for photoelectric absorption, Compton-scattering, and pair production plotted. Figure from~\cite{maclean_spectroscopy_2021}.}
+    \label{fig:total_crosssection}
+\end{figure}
+
 %------------------------------------------
-\subsection{Compton-Scattering}
+\subsubsection{Compton-Scattering}
 \label{sec:compton_scatter}
 %------------------------------------------
 
