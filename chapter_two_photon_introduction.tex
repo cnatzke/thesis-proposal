@@ -12,7 +12,7 @@ The EOS is well constrained for symmetric nuclear matter, matter where the numbe
 The largest uncertainties in the EOS for neutron rich matter lie in the limited knowledge of the symmetry energy $J$, the difference between the energies of neutron and nuclear matter at saturation density, and the slope of the symmetry energy $L$, which governs the pressure of neutron matter. 
 
 Atomic nuclei provide a terrestrial probe of nuclear matter and the symmetry energy $J$, where it contributes to the formation of neutron skins in systems with a neutron excess. 
-$J$ and $L$ can be correlated with isovector collective excitations of nucleus, such as the pygmy dipole resonance \cite{carbone_constraints_2010} and giant dipole resonances (GDRs) \cite{trippa_giant_2008}, via calulations based on energy density functionals (EDfs) suggesting the neutron skin thickness, the difference between the point-neutron and point-proton radii~\cite{tsang_constraints_2012}, could be constrained by measuring isovector collective observables at low energy \cite{krasznahorkay_excitation_1999}.
+$J$ and $L$ can be correlated with isovector collective excitations of nucleus, such as the pygmy dipole resonance \cite{carbone_constraints_2010} and giant dipole resonances (GDRs) \cite{trippa_giant_2008}, via calulations based on energy density functionals (EDFs) suggesting the neutron skin thickness, the difference between the point-neutron and point-proton radii~\cite{tsang_constraints_2012}, could be constrained by measuring isovector collective observables at low energy \cite{krasznahorkay_excitation_1999}.
 A direct experimental measurement of $R_{skin}$ is extremely challenging but can be indirectly extracted by its correlation to collective isovector observables at low energies \cite{birkhan_electric_2017}. 
 One such observable is the dipole polarizability $\alpha_D$ \cite{birkhan_electric_2017}, providing an experimentally viable tool to constrain the EOS of neutron matter and the physics of neutron stars. 
 % TODO : Add citations to last sentence. 6-11 from birkham
@@ -20,10 +20,10 @@ One such observable is the dipole polarizability $\alpha_D$ \cite{birkhan_electr
 %------------------------------------------
 \subsection{Electric Polarizability and Magnetic Susceptibility}
 %------------------------------------------
-The concept of polarizability, a fundamental concept in physics the describes how applied electric or magnetic fields induce an electric or magnetic multipole moment in the matter of interest \cite{jackson_classical_1999}, plays a large role in nuclear physics observables across a broad range of interests.
-Of specific interest to the EOS is the electric and magnetic dipole polarizability of the nucleus because nuclear DFT calculations suggest a strong correlation between $\alpha_D$ and the neutron radius, $R_{n}$~\cite{hagen_neutron_2016}. 
-The static dipole polarization of the ground and excited state shape of atomic nuclei is influenced by the state's coupling to higher-energy collective modes, like the giant dipole resonance and pygmy dipole resonance, via virtual excitations. 
-As described in S\"oderstr\"om \textit{et al.}~\cite{soderstrom_electromagnetic_2020}, the static dipole polarizability, $\alpha_D$ can be obtained from the photonuclear population of excited states, given by
+Polarizability is a fundamental concept in physics that describes how applied electric or magnetic fields induce an electric or magnetic multipole moment in the matter of interest \cite{jackson_classical_1999} and plays a large role in nuclear physics observables.
+In fact, DFT calculations suggest a strong correlation between the static dipole polarizability, $\alpha_D$, and the neutron radius, $R_{n}$~\cite{hagen_neutron_2016}. 
+The static dipole polarization of the ground and excited state shape of atomic nuclei is influenced by the state's coupling to higher-energy collective modes, like the GDR and pygmy dipole resonance, via virtual excitations. 
+As described in Ref.~\cite{soderstrom_electromagnetic_2020}, $\alpha_D$ can be obtained from the photonuclear population of excited states, given by
 
 \begin{equation} \label{eqn:scalar_dipole_polarizability}
     \alpha_{D,E1} = 2 e \sum_n \frac{|\langle I_0 || E1 || I_n \rangle |^2}{E_n - E_0}
@@ -32,7 +32,7 @@ As described in S\"oderstr\"om \textit{et al.}~\cite{soderstrom_electromagnetic_
 where $I_0$, $E1$, and $I_n$ are the matrix elements for the ground state, electric dipole transition, and excited state respectively; $e$ is the elementary charge of the electron; and $E_n$ is the energy of the state. 
 The value of $\alpha_D$, and the analogous magnetic susceptibility $\chi$, in atomic and nuclear systems spans many orders of magnitude depending on the scale of interest, for example the magnetic susceptibility of a nucleus is twelve orders of magnitude smaller than that of an atom \cite{knupfer_scaling_1985}.
 
-Following the explanation in S\"oderstr\"om \textit{et al.}~\cite{soderstrom_electromagnetic_2020} the polarizability can be expanded past the scalar case to include separate tensor components describing higher-order electric and magnetic multipoles. 
+The polarizability can be expanded past the scalar case to include separate tensor components describing higher-order electric and magnetic multipoles~\cite{soderstrom_electromagnetic_2020}. 
 Using the nuclear structure framework these off diagonal polarizabilities appear as very weak second-order electromagnetic processes that can be expressed analogously to Eq. (\ref{eqn:scalar_dipole_polarizability}) in terms of either electric and magnetic components or different multipolarities. 
 
 \begin{equation} \label{eqn:m2e2_dipole_polarizability}
@@ -49,24 +49,24 @@ where $\omega$ is the interference frequency of the emitted gamma-rays and is ap
 This second-order electromagnetic process was discussed in the doctorate dissertation of Maria G\"oppert-Mayer~\cite{goppert-mayer_uber_1931} where the estimated relative probability of two-photon absorption to the single-photon process is $10^{-7}$. 
 
 The electric dipole polarizability has been measured for a variety of stable isotopes, $^{48}$Ca \cite{birkhan_electric_2017}, $^{120}$Sn \cite{hashimoto_dipole_2015}, and $^{208}$Pb \cite{tamii_complete_2011} using proton inelastic scattering, and $\alpha_D$ has only been measured for one short-lived nucleus, $^{68}$Ni~\cite{rossi_measurement_2013}.
-At this time the electric dipole polarizability for a short-lived nuclear state has not been experimentally measured, but using the \textit{transition} electric polarizabilty, the difference in $\alpha_D$ between the two states, and the ground state polarizabilty the polarizabilty of a short-lived nuclear state can be measured.
+At this time the electric dipole polarizability for a short-lived nuclear state has not been experimentally measured, but using the \textit{transition} electric polarizability, the difference in $\alpha_D$ between the two states, and the ground state polarizability the polarizability of a short-lived nuclear state can be measured.
+This proposal highlights work towards the first measurement of this quantity using nuclear two-photon decay which is a uniquely suited probe of the transition polarizability.
 
-%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------
 \subsection{Nuclear Gamma Decay and Internal Conversion}
-%%%%%%%%%%%%%%%%%%%%
-Nuclear gamma decay is an electromagnetic process in which an unstable nucleus deexcites into a more energetically favourable state via the emission of a photon of gamma radiation. 
-The kinetic energy of the photon is equivalent to the energy difference in the initial and final states of the nucleus, save for a small amount of recoil kinetic energy imparted to the nucleus, and the photon's angular momentum equals the difference in angular momentum of the nucleus' state. 
-This restriction on angular momentum forbids the emission of a $\gamma$-ray from two states with equal angular momentum, a photon must have at least 1$\hbar$ unit of angular momentum, denoted as an E0 transition.
+%------------------------------------------
+Nuclear gamma decay is an electromagnetic process in which an unstable nucleus deexcites into a more energetically favourable state via the emission of a photon.
+The energy of the photon is roughly equivalent to the energy difference in the initial and final states of the nucleus (save for a small amount of recoil kinetic energy imparted to the nucleus) and the photon's angular momentum equals the difference in angular momentum of the nucleus' state. 
+This restriction on angular momentum forbids the emission of a $\gamma$-ray from two states $0^+$ states since the photon is a spin 0 Boson and cannot carry away less than $1\hbar$ units of angular momentum. 
 
-Gamma-decay often competes with another first-order decay mode called Internal Conversion. 
-Internal conversion (IC) is an electroweak process where the nucleus deexcites by transferring its energy to an atomic electron. 
-Internal Conversion is particularly important for transitions where both the initial and final states have a $0^+$ spin-parity since IC is the only direct process by which the nucleus can de-excite~\cite{krane_introductory_1987}.
+Gamma-decay often competes with another first-order decay mode called Internal Conversion (IC) which is an electroweak process where the nucleus deexcites by transferring its energy to an atomic electron. 
+IC is particularly important for transitions where both the initial and final states have a $0^+$ spin-parity since it is the only direct process by which the nucleus can de-excite~\cite{krane_introductory_1987}.
 
-%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------
 \subsection{Nuclear Two-photon Decay}
-%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------
 
-The only known experimental probe for the transition electric dipole polarizabilty, $\alpha_D^{fi}$ is nuclear two-photon decay.
+The only known experimental probe for the transition electric dipole polarizability, $\alpha_D^{fi}$ is nuclear two-photon decay.
 Nuclear two-photon decay is a second-order QED process wherein the nucleus simultaneously emits two photons of continuous energy that sum to the initial excitation energy, and the two photons couple to preserve the change in angular momentum of the transition \cite{kramp_nuclear_1987}.
 
 \begin{figure}[H]
@@ -120,12 +120,12 @@ where $\beta = \frac{\alpha_{E2}^2}{\pi (12)^2}$.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{two_photon_energy_sharing_kramp.png}
-    \caption{Energy sharing spectrum for the 6.05 MeV two-photon decay of $^{16}$O. The solid line represents the energy distribution for a pure dipole transition and the dashed line a pure quadrupole transition. Figure from~\cite{kramp_nuclear_1987}.}
+    \caption{Energy spectrum for \textit{one} of the two photons for the 6.05 MeV two-photon decay of $^{16}$O. The solid line represents the energy distribution for a pure dipole transition and the dashed line a pure quadrupole transition. Figure from~\cite{kramp_nuclear_1987}.}
     \label{fig:two_photon_energy_sharing_kramp}
 \end{figure}
   
-According to Schirmer \textit{et al.} two-photon decay in $^{90}$Zr and $^{40}$Ca occurs not only through two E1 emission but also through equally strong 2M1 emission leading to a linear interference term in the angular correlation function linear with respect to $\cos\theta_{12}$. 
-Kramp \textit{et al.} found the relative branching ratio of 2E2 to 2E1 decays was on the order of $<0.8\%$ with theoretical upper limit of $0.1\%$, motivating the approximation $\alpha_{E2} = 0$.
+According to Ref.~\cite{schirmer_double_1984}, two-photon decay in $^{90}$Zr and $^{40}$Ca occurs not only through two E1 emission but also through equally strong 2M1 emission leading to a linear interference term in the angular correlation function linear with respect to $\cos\theta_{12}$. 
+Previous measurements in Ref.~\cite{kramp_nuclear_1987} found the relative branching ratio of 2E2 to 2E1 decays was on the order of $<0.8\%$ with theoretical upper limit of $0.1\%$, motivating the approximation $\alpha_{E2} = 0$.
 Equation \ref{eqn:diff_decay_rate_full} becomes 
 \begin{equation}
     \frac{d^2\Gamma_{\gamma\gamma}}{d \cos\theta_{12} dE_{\gamma_1}} \propto E_{\gamma_1}^3 E_{\gamma_2}^3 \left( 1 + \frac{4 \alpha_{E1} \chi}{\alpha_{E1}^2 + \chi^2} \cos\theta_{12} +  \cos^2\theta_{12} \right)
@@ -135,7 +135,7 @@ The expected angular correlation is proportional to
 \begin{equation} \label{eqn:angular-distribution}
    W(\theta_{12}) \propto \left( 1 + \frac{4 \alpha_{E1} \chi}{\alpha_{E1}^2 + \chi^2} \cos\theta_{12} +  \cos^2\theta_{12} \right)
 \end{equation}
-neglecting the linear polarization term present in Schirmer \textit{et al.} \cite{schirmer_double_1984}.
+neglecting the linear polarization term present in Ref.~\cite{schirmer_double_1984}.
 An example of this distribution is show in~\ref{fig:two_photon_angular_dist} for $^{40}$Ca and $^{90}$Zr.
 
 \begin{figure}[htbp]
