@@ -303,9 +303,6 @@ TSWLatexianTemp*
 # vscode 
 *.vscode
 
-# graphics directory
-graphics.nosync
-
 # Latex cleaner script
 texclean
 clean_up_latex
